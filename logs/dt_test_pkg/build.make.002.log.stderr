@@ -1,0 +1,14 @@
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/weather_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/weather_node.cpp:22:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose01[m[K’ was not declared in this scope
+     [01;31m[Kpose01[m[K.pose.position.x = 0;
+     [01;31m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/weather_node.cpp:22:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kpopen[m[K’
+     [01;36m[Kpose01[m[K.pose.position.x = 0;
+     [01;36m[K^~~~~~[m[K
+     [32m[Kpopen[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/weather_node.cpp:29:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kreal_pos_pub[m[K’ was not declared in this scope
+         [01;31m[Kreal_pos_pub[m[K.publish(pose01);
+         [01;31m[K^~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/weather.dir/build.make:63: CMakeFiles/weather.dir/src/weather_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2623: CMakeFiles/weather.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

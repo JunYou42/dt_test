@@ -1,0 +1,21 @@
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:34:95:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid DigitalTwin::state_cb(const ConstPtr&)[m[K’
+     ros::Subscriber state_sub = nh_.subscribe<mavros_msgs::State>("mavros/state", 10, state_cb[01;31m[K)[m[K;
+                                                                                               [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:60:10:[m[K [01;36m[Knote: [m[Kdeclared here
+     void [01;36m[Kstate_cb[m[K(const mavros_msgs::State::ConstPtr& msg){
+          [01;36m[K^~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In constructor ‘[01m[KDigitalTwin::DigitalTwin()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:79:42:[m[K [01;31m[Kerror: [m[KISO C++ forbids taking the address of an unqualified or parenthesized non-static member function to form a pointer to member function.  Say ‘[01m[K&DigitalTwin::spinThread[m[K’ [[01;31m[K-fpermissive[m[K]
+         spin_thread = new boost::thread(&[01;31m[KspinThread[m[K);
+                                          [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/boost/thread/thread_only.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+/usr/include/boost/thread/detail/thread.hpp: In instantiation of ‘[01m[Kvoid boost::detail::thread_data<F>::run() [with F = void (DigitalTwin::*)()][m[K’:
+[01m[K/usr/include/boost/thread/detail/thread.hpp:118:18:[m[K   required from here
+[01m[K/usr/include/boost/thread/detail/thread.hpp:120:17:[m[K [01;31m[Kerror: [m[Kmust use ‘[01m[K.*[m[K’ or ‘[01m[K->*[m[K’ to call pointer-to-member function in ‘[01m[K((boost::detail::thread_data<void (DigitalTwin::*)()>*)this)->boost::detail::thread_data<void (DigitalTwin::*)()>::f (...)[m[K’, e.g. ‘[01m[K(... ->* ((boost::detail::thread_data<void (DigitalTwin::*)()>*)this)->boost::detail::thread_data<void (DigitalTwin::*)()>::f) (...)[m[K’
+                 [01;31m[Kf[m[K();
+                 [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

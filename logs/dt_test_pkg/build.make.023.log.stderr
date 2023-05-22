@@ -1,0 +1,90 @@
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:45:20:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+     ros::Rate rate([01;31m[K20.0[m[K);
+                    [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:45:20:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In constructor ‘[01m[KDigitalTwin::DigitalTwin()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:58:42:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid DigitalTwin::state_cb(const ConstPtr&)[m[K’
+             ("mavros/state", 10, state_cb[01;31m[K)[m[K;
+                                          [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:90:10:[m[K [01;36m[Knote: [m[Kdeclared here
+     void [01;36m[Kstate_cb[m[K(const mavros_msgs::State::ConstPtr& msg){
+          [01;36m[K^~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:72:13:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kros::Rate DigitalTwin::rate(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+             [01;31m[Krate[m[K.sleep();
+             [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In member function ‘[01m[Kvoid DigitalTwin::offboard_send_target_pose()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:109:13:[m[K [01;31m[Kerror: [m[K‘[01m[Klocal_pos_pub[m[K’ was not declared in this scope
+             [01;31m[Klocal_pos_pub[m[K.publish(pose);
+             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:111:13:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kros::Rate DigitalTwin::rate(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+             [01;31m[Krate[m[K.sleep();
+             [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:125:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kset_mode_client[m[K’ was not declared in this scope
+                 if( [01;31m[Kset_mode_client[m[K.call(offb_set_mode) &&
+                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:133:25:[m[K [01;31m[Kerror: [m[K‘[01m[Karming_client[m[K’ was not declared in this scope
+                     if( [01;31m[Karming_client[m[K.call(arm_cmd) &&
+                         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:142:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klocal_pos_pub[m[K’ was not declared in this scope
+         [01;31m[Klocal_pos_pub[m[K.publish(pose01);
+         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:142:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose01[m[K’ was not declared in this scope
+         local_pos_pub.publish([01;31m[Kpose01[m[K);
+                               [01;31m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:142:31:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kpose[m[K’
+         local_pos_pub.publish([01;36m[Kpose01[m[K);
+                               [01;36m[K^~~~~~[m[K
+                               [32m[Kpose[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:145:9:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kros::Rate DigitalTwin::rate(int)[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+         [01;31m[Krate[m[K.sleep();
+         [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In member function ‘[01m[Kvoid DigitalTwin::safe_control()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:155:85:[m[K [01;31m[Kerror: [m[K‘[01m[KControlEval[m[K’ is not a member of ‘[01m[Kdt_test_pkg[m[K’
+         ros::ServiceClient client_control_evaluation = n.serviceClient<dt_test_pkg::[01;31m[KControlEval[m[K>("control_evaluation");// client connnected to service
+                                                                                     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:155:85:[m[K [01;31m[Kerror: [m[K‘[01m[KControlEval[m[K’ is not a member of ‘[01m[Kdt_test_pkg[m[K’
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:155:118:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::serviceClient<<expression error> >(const char [19])[m[K’
+         ros::ServiceClient client_control_evaluation = n.serviceClient<dt_test_pkg::ControlEval>("control_evaluation"[01;31m[K)[m[K;// client connnected to service
+                                                                                                                      [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1240:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MReq, class MRes> ros::ServiceClient ros::NodeHandle::serviceClient(const string&, bool, const M_string&)[m[K’
+   ServiceClient [01;36m[KserviceClient[m[K(const std::string& service_name, bool persistent = false,
+                 [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1240:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:155:118:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         ros::ServiceClient client_control_evaluation = n.serviceClient<dt_test_pkg::ControlEval>("control_evaluation"[01;31m[K)[m[K;// client connnected to service
+                                                                                                                      [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1260:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Service> ros::ServiceClient ros::NodeHandle::serviceClient(const string&, bool, const M_string&)[m[K’
+   ServiceClient [01;36m[KserviceClient[m[K(const std::string& service_name, bool persistent = false,
+                 [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:1260:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:155:118:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         ros::ServiceClient client_control_evaluation = n.serviceClient<dt_test_pkg::ControlEval>("control_evaluation"[01;31m[K)[m[K;// client connnected to service
+                                                                                                                      [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:156:22:[m[K [01;31m[Kerror: [m[K‘[01m[KControlEval[m[K’ is not a member of ‘[01m[Kdt_test_pkg[m[K’
+         dt_test_pkg::[01;31m[KControlEval[m[K control_evaluation_msg;
+                      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:160:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kcontrol_evaluation_msg[m[K’ was not declared in this scope
+         if (client_control_evaluation.call([01;31m[Kcontrol_evaluation_msg[m[K) )
+                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:160:44:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kclient_control_evaluation[m[K’
+         if (client_control_evaluation.call([01;36m[Kcontrol_evaluation_msg[m[K) )
+                                            [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+                                            [32m[Kclient_control_evaluation[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:163:18:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kbool[m[K’
+             std::[01;31m[Kbool[m[K result = control_evaluation_msg.response.control_ok;
+                  [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:170:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult[m[K’ was not declared in this scope
+         return [01;31m[Kresult[m[K;
+                [01;31m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:170:16:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K-fpermissive[m[K]
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:193:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass DigitalTwin[m[K’ has no member named ‘[01m[Kmain_loop[m[K’
+     digital_drone.[01;31m[Kmain_loop[m[K(rate_sleep);
+                   [01;31m[K^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

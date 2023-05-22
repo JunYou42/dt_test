@@ -1,0 +1,5 @@
+/usr/bin/ld: cannot find -lmavros
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/offboard_node_test.dir/build.make:119: /home/roku/workspace_jun/dt_test/devel/.private/my_controller_pkg/lib/my_controller_pkg/offboard_node_test] Error 1
+make[1]: *** [CMakeFiles/Makefile2:594: CMakeFiles/offboard_node_test.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

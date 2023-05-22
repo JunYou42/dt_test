@@ -1,0 +1,14 @@
+[31m[1mCMake Error[0m at /home/roku/workspace_jun/dt_test/build/dt_test_pkg/cmake/dt_test_pkg-genmsg.cmake:3 (message):
+  Could not find messages which
+  '/home/roku/workspace_jun/dt_test/src/dt_test_pkg/srv/ControlEval.srv'
+  depends on.  Did you forget to specify generate_messages(DEPENDENCIES ...)?
+
+  Cannot locate message [Pose]: unknown package [dt_test_pkg] on search path
+  [{{'geometry_msgs': ['/opt/ros/noetic/share/geometry_msgs/cmake/../msg'],
+  'std_msgs': ['/opt/ros/noetic/share/std_msgs/cmake/../msg']}}]
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/noetic/share/genmsg/cmake/genmsg-extras.cmake:307 (include)
+  CMakeLists.txt:84 (generate_messages)
+
+
+make: *** [Makefile:1370: cmake_check_build_system] Error 1

@@ -1,0 +1,29 @@
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:78:20:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kcurrent_state[m[K’
+ mavros_msgs::State [01;31m[Kcurrent_state[m[K;
+                    [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In function ‘[01m[Kvoid state_cb(const ConstPtr&)[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:80:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state[m[K’ was not declared in this scope
+     [01;31m[Kcurrent_state[m[K = *msg;
+     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:80:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksetstate[m[K’
+     [01;36m[Kcurrent_state[m[K = *msg;
+     [01;36m[K^~~~~~~~~~~~~[m[K
+     [32m[Ksetstate[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:103:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state[m[K’ was not declared in this scope
+     while(ros::ok() && ![01;31m[Kcurrent_state[m[K.connected){
+                         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:103:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksetstate[m[K’
+     while(ros::ok() && ![01;36m[Kcurrent_state[m[K.connected){
+                         [01;36m[K^~~~~~~~~~~~~[m[K
+                         [32m[Ksetstate[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:129:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state[m[K’ was not declared in this scope
+         if( [01;31m[Kcurrent_state[m[K.mode != "OFFBOARD" &&
+             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:129:13:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksetstate[m[K’
+         if( [01;36m[Kcurrent_state[m[K.mode != "OFFBOARD" &&
+             [01;36m[K^~~~~~~~~~~~~[m[K
+             [32m[Ksetstate[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

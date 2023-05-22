@@ -1,0 +1,29 @@
+[ 10%] Built target physical_entity
+[ 10%] Built target _dt_test_pkg_generate_messages_check_deps_ControlEval
+[ 10%] Built target std_msgs_generate_messages_py
+[ 10%] Built target _dt_test_pkg_generate_messages_check_deps_Wind
+[ 10%] Built target sensor_msgs_generate_messages_py
+[ 10%] Built target std_msgs_generate_messages_nodejs
+[ 10%] Built target geometry_msgs_generate_messages_py
+[ 10%] Built target geometry_msgs_generate_messages_nodejs
+[ 10%] Built target sensor_msgs_generate_messages_nodejs
+[ 10%] Built target geometry_msgs_generate_messages_eus
+[ 10%] Built target std_msgs_generate_messages_eus
+[ 10%] Built target sensor_msgs_generate_messages_eus
+[ 10%] Built target geometry_msgs_generate_messages_cpp
+[ 10%] Built target std_msgs_generate_messages_cpp
+[ 10%] Built target sensor_msgs_generate_messages_cpp
+[ 10%] Built target geometry_msgs_generate_messages_lisp
+[ 10%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target weather[0m
+[ 10%] Built target sensor_msgs_generate_messages_lisp
+[ 21%] Built target digital_twin
+[ 42%] Built target dt_test_pkg_generate_messages_py
+[ 52%] [32mBuilding CXX object CMakeFiles/weather.dir/src/weather_node.cpp.o[0m
+[ 63%] Built target dt_test_pkg_generate_messages_eus
+[ 73%] Built target dt_test_pkg_generate_messages_cpp
+[ 84%] Built target dt_test_pkg_generate_messages_lisp
+[ 94%] Built target dt_test_pkg_generate_messages_nodejs
+[ 94%] Built target dt_test_pkg_generate_messages
+[100%] [32m[1mLinking CXX executable /home/roku/workspace_jun/dt_test/devel/.private/dt_test_pkg/lib/dt_test_pkg/weather[0m
+[100%] Built target weather

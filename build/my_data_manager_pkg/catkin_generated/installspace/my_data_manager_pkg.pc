@@ -1,0 +1,8 @@
+prefix=/home/roku/workspace_jun/dt_test/install
+
+Name: my_data_manager_pkg
+Description: Description of my_data_manager_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

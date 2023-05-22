@@ -1,0 +1,6 @@
+devel_space: /home/roku/workspace_jun/dt_test/devel
+install: false
+install_space: /home/roku/workspace_jun/dt_test/install
+profile: default
+source_space: /home/roku/workspace_jun/dt_test/src
+workspace: /home/roku/workspace_jun/dt_test

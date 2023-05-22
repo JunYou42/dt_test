@@ -1,0 +1,11 @@
+In file included from [01m[K/usr/include/boost/thread/thread_only.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/thread.hpp:12[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+/usr/include/boost/thread/detail/thread.hpp: In instantiation of ‘[01m[Kvoid boost::detail::thread_data<F>::run() [with F = void (DigitalTwin::*)()][m[K’:
+[01m[K/usr/include/boost/thread/detail/thread.hpp:118:18:[m[K   required from here
+[01m[K/usr/include/boost/thread/detail/thread.hpp:120:17:[m[K [01;31m[Kerror: [m[Kmust use ‘[01m[K.*[m[K’ or ‘[01m[K->*[m[K’ to call pointer-to-member function in ‘[01m[K((boost::detail::thread_data<void (DigitalTwin::*)()>*)this)->boost::detail::thread_data<void (DigitalTwin::*)()>::f (...)[m[K’, e.g. ‘[01m[K(... ->* ((boost::detail::thread_data<void (DigitalTwin::*)()>*)this)->boost::detail::thread_data<void (DigitalTwin::*)()>::f) (...)[m[K’
+                 [01;31m[Kf[m[K();
+                 [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

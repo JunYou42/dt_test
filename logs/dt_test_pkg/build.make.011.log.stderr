@@ -1,0 +1,291 @@
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/physical_entity.cpp:5:10:[m[K [01;31m[Kfatal error: [m[Kdt_test_pkg/Wind.h: No such file or directory
+ #include [01;31m[K"dt_test_pkg/Wind.h"[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/physical_entity.dir/build.make:63: CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:233: CMakeFiles/physical_entity.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:12:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kthread[m[K’ in namespace ‘[01m[Kboost[m[K’ does not name a type
+ boost::[01;31m[Kthread[m[K *spin_thread;
+        [01;31m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:12:1:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kpthread[m[K’
+ [01;36m[Kboost[m[K::thread *spin_thread;
+ [01;36m[K^~~~~[m[K
+ [32m[Kpthread[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In constructor ‘[01m[KDigitalTwin::DigitalTwin()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:128:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::subscribe<geometry_msgs::PoseStamped>(const char [28], int, void (DigitalTwin::*)(), DigitalTwin*)[m[K’
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, &DigitalTwin::poseCallBack, this[01;31m[K)[m[K;
+                                                                                                                                [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:402:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M), T*, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M), T* obj,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:402:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:128:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, &DigitalTwin::poseCallBack, this[01;36m[K)[m[K;
+                                                                                                                                [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:413:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M) const, T*, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M) const, T* obj,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:413:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:128:[m[K [01;36m[Knote: [m[K  types ‘[01m[Kvoid (T::)(geometry_msgs::PoseStamped_<std::allocator<void> >) const[m[K’ and ‘[01m[Kvoid (DigitalTwin::)()[m[K’ have incompatible cv-qualifiers
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, &DigitalTwin::poseCallBack, this[01;36m[K)[m[K;
+                                                                                                                                [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:465:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&), T*, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:465:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:128:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, &DigitalTwin::poseCallBack, this[01;36m[K)[m[K;
+                                                                                                                                [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:475:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&) const, T*, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:475:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:128:[m[K [01;36m[Knote: [m[K  types ‘[01m[Kvoid (T::)(const boost::shared_ptr<const geometry_msgs::PoseStamped_<std::allocator<void> > >&) const[m[K’ and ‘[01m[Kvoid (DigitalTwin::)()[m[K’ have incompatible cv-qualifiers
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, &DigitalTwin::poseCallBack, this[01;36m[K)[m[K;
+                                                                                                                                [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:529:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M), const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M),
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:529:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:128:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, &DigitalTwin::poseCallBack, this[01;36m[K)[m[K;
+                                                                                                                                [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:540:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M) const, const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M) const,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:540:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:128:[m[K [01;36m[Knote: [m[K  types ‘[01m[Kvoid (T::)(geometry_msgs::PoseStamped_<std::allocator<void> >) const[m[K’ and ‘[01m[Kvoid (DigitalTwin::)()[m[K’ have incompatible cv-qualifiers
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, &DigitalTwin::poseCallBack, this[01;36m[K)[m[K;
+                                                                                                                                [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:594:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&), const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:594:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:128:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, &DigitalTwin::poseCallBack, this[01;36m[K)[m[K;
+                                                                                                                                [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:605:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&) const, const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:605:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:128:[m[K [01;36m[Knote: [m[K  types ‘[01m[Kvoid (T::)(const boost::shared_ptr<const geometry_msgs::PoseStamped_<std::allocator<void> > >&) const[m[K’ and ‘[01m[Kvoid (DigitalTwin::)()[m[K’ have incompatible cv-qualifiers
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, &DigitalTwin::poseCallBack, this[01;36m[K)[m[K;
+                                                                                                                                [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:656:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (*)(M), const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(*fp)(M), const TransportHints& transport_hints = TransportHints())
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:656:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:96:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K&DigitalTwin::poseCallBack[m[K’ (type ‘[01m[Kvoid (DigitalTwin::*)()[m[K’) to type ‘[01m[Kvoid (*)(geometry_msgs::PoseStamped_<std::allocator<void> >)[m[K’
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, [01;36m[K&DigitalTwin[m[K::poseCallBack, this);
+                                                                                                [01;36m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:704:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (*)(const boost::shared_ptr<const M>&), const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(*fp)(const boost::shared_ptr<M const>&), const TransportHints& transport_hints = TransportHints())
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:704:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:96:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K&DigitalTwin::poseCallBack[m[K’ (type ‘[01m[Kvoid (DigitalTwin::*)()[m[K’) to type ‘[01m[Kvoid (*)(const boost::shared_ptr<const geometry_msgs::PoseStamped_<std::allocator<void> > >&)[m[K’
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, [01;36m[K&DigitalTwin[m[K::poseCallBack, this);
+                                                                                                [01;36m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:750:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, const boost::function<void(const boost::shared_ptr<const M>&)>&, const VoidConstPtr&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, const boost::function<void (const boost::shared_ptr<M const>&)>& callback,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:750:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:128:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K(DigitalTwin*)this[m[K’ (type ‘[01m[KDigitalTwin*[m[K’) to type ‘[01m[Kconst VoidConstPtr&[m[K’ {aka ‘[01m[Kconst boost::shared_ptr<const void>&[m[K’}
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, &DigitalTwin::poseCallBack, this[01;36m[K)[m[K;
+                                                                                                                                [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:799:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class C> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, const boost::function<void(C)>&, const VoidConstPtr&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, const boost::function<void (C)>& callback,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:799:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:35:128:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst boost::function<void(C)>[m[K’ and ‘[01m[Kvoid (DigitalTwin::*)()[m[K’
+         pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("/mavros/local_position/pose",10, &DigitalTwin::poseCallBack, this[01;36m[K)[m[K;
+                                                                                                                                [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt_test_pkg[m[K’ was not declared in this scope
+         wind_sub = nh_.subscribe<[01;31m[Kdt_test_pkg[m[K::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this);
+                                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:24:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+         wind_sub = nh_.[01;31m[Ksubscribe<dt_test_pkg::Wind>[m[K("/weather/wind",10, &DigitalTwin::windCallBack, this);
+                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::subscribe<<expression error> >(const char [14], int, void (DigitalTwin::*)(), DigitalTwin*)[m[K’
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:402:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M), T*, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M), T* obj,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:402:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:413:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M) const, T*, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M) const, T* obj,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:413:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:465:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&), T*, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:465:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:475:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&) const, T*, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:475:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:529:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M), const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M),
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:529:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:540:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(M) const, const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(T::*fp)(M) const,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:540:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:594:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&), const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:594:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:605:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class T> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (T::*)(const boost::shared_ptr<const M>&) const, const boost::shared_ptr<U>&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:605:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:656:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (*)(M), const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(*fp)(M), const TransportHints& transport_hints = TransportHints())
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:656:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:704:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, void (*)(const boost::shared_ptr<const M>&), const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, void(*fp)(const boost::shared_ptr<M const>&), const TransportHints& transport_hints = TransportHints())
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:704:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:750:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, const boost::function<void(const boost::shared_ptr<const M>&)>&, const VoidConstPtr&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, const boost::function<void (const boost::shared_ptr<M const>&)>& callback,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:750:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:799:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M, class C> ros::Subscriber ros::NodeHandle::subscribe(const string&, uint32_t, const boost::function<void(C)>&, const VoidConstPtr&, const ros::TransportHints&)[m[K’
+   Subscriber [01;36m[Ksubscribe[m[K(const std::string& topic, uint32_t queue_size, const boost::function<void (C)>& callback,
+              [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:799:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:36:105:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+         wind_sub = nh_.subscribe<dt_test_pkg::Wind>("/weather/wind",10, &DigitalTwin::windCallBack, this[01;31m[K)[m[K;
+                                                                                                         [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:43:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kspin_thread[m[K’ was not declared in this scope
+         [01;31m[Kspin_thread[m[K=new boost::thread(&spinThread);
+         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:43:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KspinThread[m[K’
+         [01;36m[Kspin_thread[m[K=new boost::thread(&spinThread);
+         [01;36m[K^~~~~~~~~~~[m[K
+         [32m[KspinThread[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:43:25:[m[K [01;31m[Kerror: [m[Kexpected type-specifier
+         spin_thread=new [01;31m[Kboost[m[K::thread(&spinThread);
+                         [01;31m[K^~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In destructor ‘[01m[KDigitalTwin::~DigitalTwin()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:54:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kspin_thread[m[K’ was not declared in this scope
+         [01;31m[Kspin_thread[m[K->join();
+         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:54:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KspinThread[m[K’
+         [01;36m[Kspin_thread[m[K->join();
+         [01;36m[K^~~~~~~~~~~[m[K
+         [32m[KspinThread[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K At global scope:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:76:20:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kcurrent_state[m[K’
+ mavros_msgs::State [01;31m[Kcurrent_state[m[K;
+                    [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In function ‘[01m[Kvoid state_cb(const ConstPtr&)[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:78:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state[m[K’ was not declared in this scope
+     [01;31m[Kcurrent_state[m[K = *msg;
+     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:78:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksetstate[m[K’
+     [01;36m[Kcurrent_state[m[K = *msg;
+     [01;36m[K^~~~~~~~~~~~~[m[K
+     [32m[Ksetstate[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:101:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state[m[K’ was not declared in this scope
+     while(ros::ok() && ![01;31m[Kcurrent_state[m[K.connected){
+                         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:101:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksetstate[m[K’
+     while(ros::ok() && ![01;36m[Kcurrent_state[m[K.connected){
+                         [01;36m[K^~~~~~~~~~~~~[m[K
+                         [32m[Ksetstate[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:127:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_state[m[K’ was not declared in this scope
+         if( [01;31m[Kcurrent_state[m[K.mode != "OFFBOARD" &&
+             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:127:13:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ksetstate[m[K’
+         if( [01;36m[Kcurrent_state[m[K.mode != "OFFBOARD" &&
+             [01;36m[K^~~~~~~~~~~~~[m[K
+             [32m[Ksetstate[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

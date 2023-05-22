@@ -1,0 +1,6 @@
+[31m[1mCMake Error[0m at /home/roku/workspace_jun/dt_test/src/my_controller_pkg/CMakeLists.txt:164 (add_dependencies):
+  The dependency target "mavros" of target "offboard_node_test" does not
+  exist.
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
