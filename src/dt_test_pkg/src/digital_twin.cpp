@@ -1,15 +1,6 @@
-#include <ros/ros.h>
-#include <boost/thread/thread.hpp>
-#include <boost/date_time.hpp>
-#include <boost/algorithm/string.hpp>
-#include <mavros_msgs/CommandBool.h>
-#include <mavros_msgs/SetMode.h>
-#include <mavros_msgs/State.h>
-#include <geometry_msgs/PoseStamped.h>
-#include <geometry_msgs/Pose.h>
-// LOCAL
-#include <dt_test_pkg/Wind.h>
+
 #include <dt_test_pkg/ControlEval.h>
+#include "dynamic_model_quad.cpp"
 
 
 
@@ -41,7 +32,8 @@ protected:
     ros::ServiceClient set_mode_client = nh_.serviceClient<mavros_msgs::SetMode>
         ("mavros/set_mode");
             
-
+    QuadDynamicModel _dynamic_model_quad;
+    
 
     
 public:
@@ -146,7 +138,7 @@ public:
                 }
             }
 
-            // _TODO_ WRITE THE CONTROL INPUT HERE
+            // _ TODO _ WRITE THE CONTROL INPUT HERE
             // _TODO_ WRITE THE CONTROL INPUT HERE
             // _TODO_ WRITE THE CONTROL INPUT HERE
             //OPTION 1
@@ -165,6 +157,19 @@ public:
         }
 
     }
+
+
+
+    //------------------------ Models ------------------------//
+
+
+
+
+
+
+
+
+
 
     //------------------------ DT Services ------------------------//
 

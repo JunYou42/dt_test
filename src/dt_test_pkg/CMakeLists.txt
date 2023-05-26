@@ -166,12 +166,14 @@ add_executable(weather
 target_link_libraries(weather
   ${catkin_LIBRARIES}
 )
+
 add_executable(digital_twin
   src/digital_twin.cpp
 )
 target_link_libraries(digital_twin
   ${catkin_LIBRARIES}
 )
+
 add_executable(physical_entity
   src/physical_entity.cpp
 )
