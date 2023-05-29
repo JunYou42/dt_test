@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/roku/workspace_jun/dt_test/devel/.private/my_data_manager_pkg:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/roku/workspace_jun/dt_test/devel/.private/my_data_manager_pkg/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/roku/workspace_jun/dt_test/devel/.private/my_data_manager_pkg/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/roku/workspace_jun/dt_test/build/my_data_manager_pkg'
 export ROSLISP_PACKAGE_DIRECTORIES="/home/roku/workspace_jun/dt_test/devel/.private/my_data_manager_pkg/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/roku/workspace_jun/dt_test/src/my_data_manager_pkg:$ROS_PACKAGE_PATH"

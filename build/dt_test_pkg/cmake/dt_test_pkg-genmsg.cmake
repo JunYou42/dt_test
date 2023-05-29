@@ -24,7 +24,7 @@ add_custom_target(_dt_test_pkg_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/roku/workspace_jun/dt_test/src/dt_test_pkg/srv/ControlEval.srv" NAME_WE)
 add_custom_target(_dt_test_pkg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dt_test_pkg" "/home/roku/workspace_jun/dt_test/src/dt_test_pkg/srv/ControlEval.srv" "geometry_msgs/Point:geometry_msgs/Quaternion:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dt_test_pkg" "/home/roku/workspace_jun/dt_test/src/dt_test_pkg/srv/ControlEval.srv" "geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion"
 )
 
 #
@@ -44,7 +44,7 @@ _generate_msg_cpp(dt_test_pkg
 _generate_srv_cpp(dt_test_pkg
   "/home/roku/workspace_jun/dt_test/src/dt_test_pkg/srv/ControlEval.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/dt_test_pkg
 )
 
@@ -85,7 +85,7 @@ _generate_msg_eus(dt_test_pkg
 _generate_srv_eus(dt_test_pkg
   "/home/roku/workspace_jun/dt_test/src/dt_test_pkg/srv/ControlEval.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/dt_test_pkg
 )
 
@@ -126,7 +126,7 @@ _generate_msg_lisp(dt_test_pkg
 _generate_srv_lisp(dt_test_pkg
   "/home/roku/workspace_jun/dt_test/src/dt_test_pkg/srv/ControlEval.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/dt_test_pkg
 )
 
@@ -167,7 +167,7 @@ _generate_msg_nodejs(dt_test_pkg
 _generate_srv_nodejs(dt_test_pkg
   "/home/roku/workspace_jun/dt_test/src/dt_test_pkg/srv/ControlEval.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/dt_test_pkg
 )
 
@@ -208,7 +208,7 @@ _generate_msg_py(dt_test_pkg
 _generate_srv_py(dt_test_pkg
   "/home/roku/workspace_jun/dt_test/src/dt_test_pkg/srv/ControlEval.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dt_test_pkg
 )
 

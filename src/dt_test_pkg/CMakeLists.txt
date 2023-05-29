@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_srvs
   serial
 )
+find_package(Eigen3 REQUIRED)
 
 
 ## System dependencies are found with CMake's conventions
@@ -128,6 +129,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIR}
 )
 
 # # Declare a C++ library
@@ -166,14 +168,12 @@ add_executable(weather
 target_link_libraries(weather
   ${catkin_LIBRARIES}
 )
-
 add_executable(digital_twin
   src/digital_twin.cpp
 )
 target_link_libraries(digital_twin
   ${catkin_LIBRARIES}
 )
-
 add_executable(physical_entity
   src/physical_entity.cpp
 )
@@ -181,6 +181,12 @@ target_link_libraries(physical_entity
   ${catkin_LIBRARIES}
 )
 
+# add_executable(dynamic_model_quad
+#   src/dynamic_model_quad.cpp
+# )
+# target_link_libraries(dynamic_model_quad.cpp
+#   ${catkin_LIBRARIES}
+# )
 
 #############
 ## Install ##

@@ -1,1 +1,1 @@
-/home/roku/workspace_jun/git_dt_test/dt_test/devel/.private/my_data_manager_pkg/share/my_data_manager_pkg/cmake/my_data_manager_pkgConfig.cmake
+/home/roku/workspace_jun/dt_test/devel/.private/my_data_manager_pkg/share/my_data_manager_pkg/cmake/my_data_manager_pkgConfig.cmake

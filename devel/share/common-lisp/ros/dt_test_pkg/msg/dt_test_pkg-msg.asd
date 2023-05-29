@@ -1,1 +1,1 @@
-/home/roku/workspace_jun/git_dt_test/dt_test/devel/.private/dt_test_pkg/share/common-lisp/ros/dt_test_pkg/msg/dt_test_pkg-msg.asd
+/home/roku/workspace_jun/dt_test/devel/.private/dt_test_pkg/share/common-lisp/ros/dt_test_pkg/msg/dt_test_pkg-msg.asd

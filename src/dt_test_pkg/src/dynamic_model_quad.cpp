@@ -1,3 +1,4 @@
+#include <Eigen/Eigen>
 #include <ros/ros.h>
 #include <boost/thread/thread.hpp>
 #include <boost/date_time.hpp>
@@ -34,11 +35,11 @@ private:
 
 
     /* paramters computed */
-	matrix::Vector3f _Fe_computed;	// aerodynamic force
-	matrix::Vector3f _Me_computed;	// aerodynamic moment
-	matrix::Vector3f _D_computed;	// aerodynamic drag
-	matrix::Vector3f _acc_linear_computed;	
-	matrix::Vector3f _acc_angular_computed;	
+	Eigen::Vector3f _Fe_computed;	// aerodynamic force
+	Eigen::Vector3f _Me_computed;	// aerodynamic moment
+	Eigen::Vector3f _D_computed;	// aerodynamic drag
+	Eigen::Vector3f _acc_linear_computed;	
+	Eigen::Vector3f _acc_angular_computed;	
 
 public:
     QuadDynamicModel() 
@@ -85,11 +86,13 @@ public:
     }
 
 
-	matrix::Vector3f getFe() const { return _Fe_computed; }
-	matrix::Vector3f getMe() const { return _Me_computed; }
-	matrix::Vector3f getDrag() const { return _D_computed; }
-	matrix::Vector3f getAccLinear() const { return _acc_linear_computed; }
-	matrix::Vector3f getAccAngular() const { return _acc_angular_computed; }
+	Eigen::Vector3f getFe() const { return _Fe_computed; }
+	Eigen::Vector3f getMe() const { return _Me_computed; }
+	Eigen::Vector3f getDrag() const { return _D_computed; }
+	Eigen::Vector3f getAccLinear() const { return _acc_linear_computed; }
+	Eigen::Vector3f getAccAngular() const { return _acc_angular_computed; }
 
     
 };
+
+
