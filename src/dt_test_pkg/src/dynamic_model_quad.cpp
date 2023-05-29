@@ -1,4 +1,5 @@
 #include <Eigen/Eigen>
+#include <cmath>
 #include <ros/ros.h>
 #include <boost/thread/thread.hpp>
 #include <boost/date_time.hpp>
@@ -11,6 +12,8 @@
 // LOCAL
 #include <dt_test_pkg/Wind.h>
 
+using namespace Eigen
+
 class QuadDynamicModel{
 
 private:
@@ -20,31 +23,41 @@ private:
 
     mavros_msgs::State  current_state;
     geometry_msgs::Pose current_pose;
-    dt_test_pkg::Wind   current_wind;
+    Vector3f   current_wind;
 
     ros::Subscriber pose_sub;
     ros::Subscriber wind_sub;
     ros::Subscriber state_sub;
 
     
-    /*
-    model parameter:
-    - mass
-    - inertial matrix
-    */
+    //constant model parameter:
+    const float MASS; // mass of quadrotor
+    const float R;  // radius of rotor
+    const float NB; // number of blade
+    
 
+    //aerodynamic model variable:
+	Eigen::Matrix3d       _R_IB{};          // body to inertial transformation
+    
+    Vector3f _p_I = Vector3f(0.0f, 0.0f, 0.0f);
+	Vector3f _v_I = Vector3f(0.0f, 0.0f, 0.0f);
+	Vector3f _q = Quaternion(1.0f, 0.0f, 0.0f, 0.0f);
+	Vector3f _w_B = Vector3f(0.0f, 0.0f, 0.0f);
+	float _u[0] = _u[1] = _u[2] = _u[3] = 0.0f;
 
     /* paramters computed */
-	Eigen::Vector3f _Fe_computed;	// aerodynamic force
+	Eigen::Vector3f    _T[NB] {};           // thrust force in body frame [N]
+
+	Eigen::Vector3f _Fe_computed;	// aerodynamic force in inertial frame
 	Eigen::Vector3f _Me_computed;	// aerodynamic moment
-	Eigen::Vector3f _D_computed;	// aerodynamic drag
+	Eigen::Vector3f _D_computed;	// aerodynamic drag in inertial frame
 	Eigen::Vector3f _acc_linear_computed;	
 	Eigen::Vector3f _acc_angular_computed;	
 
 public:
     QuadDynamicModel() 
     {
-        // update the info
+        // update the ROS topics
         state_sub = nh_.subscribe<mavros_msgs::State>("mavros/state", 10, &QuadDynamicModel::stateCallBack, this);
         pose_sub = nh_.subscribe("/physical_entity/local_position/pose",10, &QuadDynamicModel::poseCallBack,this);
         wind_sub = nh_.subscribe("/weather/wind",10, &QuadDynamicModel::windCallBack,this);
@@ -80,7 +93,9 @@ public:
     }
 
     void windCallBack(const dt_test_pkg::Wind::ConstPtr& msg){
-        current_wind = *msg;
+        current_wind = Vector3f(msg->wind_x,
+                                msg->wind_y,
+                                msg->wind_z);
         // ROS_INFO_STREAM("[windCallBack] Get wind data.");
 
     }
@@ -94,5 +109,3 @@ public:
 
     
 };
-
-
