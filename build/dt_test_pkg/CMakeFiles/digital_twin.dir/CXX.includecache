@@ -73,7 +73,15 @@ dynamic_model_quad.cpp
 /home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp
 
 /home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp
+iostream
+-
 Eigen/Eigen
+-
+Eigen/Core
+-
+Eigen/Geometry
+-
+cmath
 -
 ros/ros.h
 -

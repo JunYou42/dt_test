@@ -1,0 +1,692 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:39:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before numeric constant
+     DiagonalMatrix<float, Dynamic> J(Vector3f[34m[K([m[K[01;31m[K1[m[K[32m[K.0f[m[K, 1.0f, 1.0f));
+                                              [34m[K~[m[K[01;31m[K^[m[K[32m[K~~~[m[K
+                                               [32m[K)[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:39:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before numeric constant
+     DiagonalMatrix<float, Dynamic> J[34m[K([m[KVector3f([01;31m[K1[m[K[32m[K.0f[m[K, 1.0f, 1.0f));
+                                     [34m[K~[m[K         [01;31m[K^[m[K[32m[K~~~[m[K
+                                               [32m[K)[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:39:46:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+     DiagonalMatrix<float, Dynamic> J(Vector3f[01;31m[K([m[K1.0f, 1.0f, 1.0f));
+                                              [01;31m[K^[m[K
+                                               [32m[K;[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:39:47:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before numeric constant
+     DiagonalMatrix<float, Dynamic> J(Vector3f([01;31m[K1.0f[m[K, 1.0f, 1.0f));
+                                               [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:40:4:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+  J([01;31m[K0[m[K, 1) = J(1, 0) = 1.0f;
+    [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:40:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:40:13:[m[K [01;31m[Kerror: [m[Kinvalid pure specifier (only ‘[01m[K= 0[m[K’ is allowed) before ‘[01m[K([m[K’ token
+  J(0, 1) = J[01;31m[K([m[K1, 0) = 1.0f;
+             [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:40:22:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[KJ[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+  J(0, 1) = J(1, 0) = [01;31m[K1.0f[m[K;
+                      [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:41:4:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+  J([01;31m[K0[m[K, 2) = J(2, 0) = 1.0f;
+    [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:41:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:41:13:[m[K [01;31m[Kerror: [m[Kinvalid pure specifier (only ‘[01m[K= 0[m[K’ is allowed) before ‘[01m[K([m[K’ token
+  J(0, 2) = J[01;31m[K([m[K2, 0) = 1.0f;
+             [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:41:22:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[KJ[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+  J(0, 2) = J(2, 0) = [01;31m[K1.0f[m[K;
+                      [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:41:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kint QuadDynamicModel::J(int)[m[K’ cannot be overloaded with ‘[01m[Kint QuadDynamicModel::J(int)[m[K’
+  [01;31m[KJ[m[K(0, 2) = J(2, 0) = 1.0f;
+  [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:40:2:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint QuadDynamicModel::J(int)[m[K’
+  [01;36m[KJ[m[K(0, 1) = J(1, 0) = 1.0f;
+  [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:42:4:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+  J([01;31m[K1[m[K, 2) = J(2, 1) = 1.0f;// inertia matrix
+    [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:42:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:42:13:[m[K [01;31m[Kerror: [m[Kinvalid pure specifier (only ‘[01m[K= 0[m[K’ is allowed) before ‘[01m[K([m[K’ token
+  J(1, 2) = J[01;31m[K([m[K2, 1) = 1.0f;// inertia matrix
+             [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:42:22:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[KJ[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+  J(1, 2) = J(2, 1) = [01;31m[K1.0f[m[K;// inertia matrix
+                      [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:42:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kint QuadDynamicModel::J(int)[m[K’ cannot be overloaded with ‘[01m[Kint QuadDynamicModel::J(int)[m[K’
+  [01;31m[KJ[m[K(1, 2) = J(2, 1) = 1.0f;// inertia matrix
+  [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:40:2:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint QuadDynamicModel::J(int)[m[K’
+  [01;36m[KJ[m[K(0, 1) = J(1, 0) = 1.0f;
+  [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:43:5:[m[K [01;31m[Kerror: [m[K‘[01m[KJ_inv[m[K’ does not name a type; did you mean ‘[01m[Ku_int[m[K’?
+     [01;31m[KJ_inv[m[K = J.inverse();
+     [01;31m[K^~~~~[m[K
+     [32m[Ku_int[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:48:46:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KEigen::Vector3f QuadDynamicModel::r [1][m[K’
+     Vector3f r[1] = Vector3f(0.0f, 0.0f, 0.0f[01;31m[K)[m[K;
+                                              [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:47:46:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KEigen::Vector3f QuadDynamicModel::r [0][m[K’
+     Vector3f r[0] = Vector3f(0.0f, 0.0f, 0.0f[01;36m[K)[m[K;// _TODO_
+                                              [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:49:46:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KEigen::Vector3f QuadDynamicModel::r [2][m[K’
+     Vector3f r[2] = Vector3f(0.0f, 0.0f, 0.0f[01;31m[K)[m[K;
+                                              [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:47:46:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KEigen::Vector3f QuadDynamicModel::r [0][m[K’
+     Vector3f r[0] = Vector3f(0.0f, 0.0f, 0.0f[01;36m[K)[m[K;// _TODO_
+                                              [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:50:46:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KEigen::Vector3f QuadDynamicModel::r [3][m[K’
+     Vector3f r[3] = Vector3f(0.0f, 0.0f, 0.0f[01;31m[K)[m[K;
+                                              [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:47:46:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KEigen::Vector3f QuadDynamicModel::r [0][m[K’
+     Vector3f r[0] = Vector3f(0.0f, 0.0f, 0.0f[01;36m[K)[m[K;// _TODO_
+                                              [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:57:29:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat QuadDynamicModel::_q[m[K’
+     float _p =0.0f, _q =0.0f[01;31m[K,[m[K _r = 0.0f;
+                             [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:56:49:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KEigen::Vector3f QuadDynamicModel::_q[m[K’
+  Vector3f _q = Quaternion(1.0f, 0.0f, 0.0f, 0.0f[01;36m[K)[m[K;  // quaternion
+                                                 [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:60:35:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat QuadDynamicModel::_u [1][m[K’
+     float _u[0] =0.0f, _u[1] =0.0f[01;31m[K,[m[K _u[2] =0.0f, _u[3] = 0.0f; // motor ouput
+                                   [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:60:18:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kfloat QuadDynamicModel::_u [0][m[K’
+     float _u[0] =[01;36m[K0.0f[m[K, _u[1] =0.0f, _u[2] =0.0f, _u[3] = 0.0f; // motor ouput
+                  [01;36m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:60:48:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat QuadDynamicModel::_u [2][m[K’
+     float _u[0] =0.0f, _u[1] =0.0f, _u[2] =0.0f[01;31m[K,[m[K _u[3] = 0.0f; // motor ouput
+                                                [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:60:18:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kfloat QuadDynamicModel::_u [0][m[K’
+     float _u[0] =[01;36m[K0.0f[m[K, _u[1] =0.0f, _u[2] =0.0f, _u[3] = 0.0f; // motor ouput
+                  [01;36m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:60:58:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat QuadDynamicModel::_u [3][m[K’
+     float _u[0] =0.0f, _u[1] =0.0f, _u[2] =0.0f, _u[3] = [01;31m[K0.0f[m[K; // motor ouput
+                                                          [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:60:18:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kfloat QuadDynamicModel::_u [0][m[K’
+     float _u[0] =[01;36m[K0.0f[m[K, _u[1] =0.0f, _u[2] =0.0f, _u[3] = 0.0f; // motor ouput
+                  [01;36m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:61:40:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat QuadDynamicModel::_omega [1][m[K’
+  float _omega[0] =0.0f, _omega[1] =0.0f[01;31m[K,[m[K _omega[2] =0.0f, _omega[3] = 0.0f; // angular velocity of motor
+                                        [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:61:19:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kfloat QuadDynamicModel::_omega [0][m[K’
+  float _omega[0] =[01;36m[K0.0f[m[K, _omega[1] =0.0f, _omega[2] =0.0f, _omega[3] = 0.0f; // angular velocity of motor
+                   [01;36m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:61:57:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat QuadDynamicModel::_omega [2][m[K’
+  float _omega[0] =0.0f, _omega[1] =0.0f, _omega[2] =0.0f[01;31m[K,[m[K _omega[3] = 0.0f; // angular velocity of motor
+                                                         [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:61:19:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kfloat QuadDynamicModel::_omega [0][m[K’
+  float _omega[0] =[01;36m[K0.0f[m[K, _omega[1] =0.0f, _omega[2] =0.0f, _omega[3] = 0.0f; // angular velocity of motor
+                   [01;36m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:61:71:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kfloat QuadDynamicModel::_omega [3][m[K’
+  float _omega[0] =0.0f, _omega[1] =0.0f, _omega[2] =0.0f, _omega[3] = [01;31m[K0.0f[m[K; // angular velocity of motor
+                                                                       [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:61:19:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kfloat QuadDynamicModel::_omega [0][m[K’
+  float _omega[0] =[01;36m[K0.0f[m[K, _omega[1] =0.0f, _omega[2] =0.0f, _omega[3] = 0.0f; // angular velocity of motor
+                   [01;36m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:63:14:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KQuadDynamicModel::NB[m[K’
+  Vector3f _d[[01;31m[KNB[m[K] {}; // direction of j-th rotor in body frame
+              [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:37:20:[m[K [01;36m[Knote: [m[Kdeclared here
+     const int NB = [01;36m[K4[m[K; // number of blade
+                    [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:64:5:[m[K [01;31m[Kerror: [m[K‘[01m[K_d[m[K’ does not name a type
+     [01;31m[K_d[m[K[0] = Vector3f(0.0f, 0.0f, 1.0f);
+     [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:65:5:[m[K [01;31m[Kerror: [m[K‘[01m[K_d[m[K’ does not name a type
+     [01;31m[K_d[m[K[1] = _d[0];
+     [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:66:5:[m[K [01;31m[Kerror: [m[K‘[01m[K_d[m[K’ does not name a type
+     [01;31m[K_d[m[K[2] = _d[0];
+     [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:67:5:[m[K [01;31m[Kerror: [m[K‘[01m[K_d[m[K’ does not name a type
+     [01;31m[K_d[m[K[3] = _d[0];
+     [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:70:16:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KQuadDynamicModel::NB[m[K’
+     float _C_T[[01;31m[KNB[m[K];
+                [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:37:20:[m[K [01;36m[Knote: [m[Kdeclared here
+     const int NB = [01;36m[K4[m[K; // number of blade
+                    [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:71:16:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KQuadDynamicModel::NB[m[K’
+     float _C_Q[[01;31m[KNB[m[K];
+                [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:37:20:[m[K [01;36m[Knote: [m[Kdeclared here
+     const int NB = [01;36m[K4[m[K; // number of blade
+                    [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:76:24:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KQuadDynamicModel::NB[m[K’
+  Eigen::Vector3f    _T[[01;31m[KNB[m[K] {};           // thrust force generated in body frame [N]
+                        [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:37:20:[m[K [01;36m[Knote: [m[Kdeclared here
+     const int NB = [01;36m[K4[m[K; // number of blade
+                    [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:77:24:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static data member ‘[01m[KQuadDynamicModel::NB[m[K’
+  Eigen::Vector3f    _Q[[01;31m[KNB[m[K] {};           // torque generated in body frame [N]
+                        [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:37:20:[m[K [01;36m[Knote: [m[Kdeclared here
+     const int NB = [01;36m[K4[m[K; // number of blade
+                    [01;36m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:47:21:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+     Vector3f r[0] = [01;31m[KVector3f(0.0f, 0.0f, 0.0f)[m[K;// _TODO_
+                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:48:21:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+     Vector3f r[1] = [01;31m[KVector3f(0.0f, 0.0f, 0.0f)[m[K;
+                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:49:21:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+     Vector3f r[2] = [01;31m[KVector3f(0.0f, 0.0f, 0.0f)[m[K;
+                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:50:21:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+     Vector3f r[3] = [01;31m[KVector3f(0.0f, 0.0f, 0.0f)[m[K;
+                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:56:26:[m[K [01;31m[Kerror: [m[Kmissing template arguments before ‘[01m[K([m[K’ token
+  Vector3f _q = Quaternion[01;31m[K([m[K1.0f, 0.0f, 0.0f, 0.0f);  // quaternion
+                          [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:58:39:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KEigen::Matrix<float, 3, 1>::Matrix(float&, Eigen::Vector3f&, float&)[m[K’
+  Vector3f _Omega = Vector3f(_p, _q, _r[01;31m[K)[m[K; // angular velocity in inertial frame
+                                       [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:387:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::RotationBase<OtherDerived, ColsAtCompileTime>&)[m[K’
+     explicit [01;36m[KMatrix[m[K(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+              [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:387:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:58:39:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’ and ‘[01m[Kfloat[m[K’
+  Vector3f _Omega = Vector3f(_p, _q, _r[01;36m[K)[m[K; // angular velocity in inertial frame
+                                       [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:376:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&)[m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const EigenBase<OtherDerived> &other)
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:376:25:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:58:39:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::EigenBase<Derived>[m[K’ and ‘[01m[Kfloat[m[K’
+  Vector3f _Omega = Vector3f(_p, _q, _r[01;36m[K)[m[K; // angular velocity in inertial frame
+                                       [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:368:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const Matrix& other) : Base(other)
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:368:25:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:355:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Scalar&, const Scalar&, const Scalar&, const Scalar&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1; Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Scalar = float][m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const Scalar& x, const Scalar& y, const Scalar& z, const Scalar& w)
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:355:25:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:345:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Scalar&, const Scalar&, const Scalar&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1; Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Scalar = float][m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const Scalar& x, const Scalar& y, const Scalar& z)
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:345:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} to ‘[01m[Kconst Scalar&[m[K’ {aka ‘[01m[Kconst float&[m[K’}
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:299:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T0, class T1> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T0&, const T1&)[m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const T0& x, const T1& y)
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:299:25:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:58:39:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+  Vector3f _Omega = Vector3f(_p, _q, _r[01;36m[K)[m[K; // angular velocity in inertial frame
+                                       [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:291:34:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T&)[m[K’
+     EIGEN_STRONG_INLINE explicit [01;36m[KMatrix[m[K(const T& x)
+                                  [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:291:34:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:58:39:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+  Vector3f _Omega = Vector3f(_p, _q, _r[01;36m[K)[m[K; // angular velocity in inertial frame
+                                       [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:273:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+     [01;36m[KMatrix[m[K(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_constructible<Scalar>::value)
+     [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:273:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:267:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(Eigen::internal::constructor_without_unaligned_array_assert) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+     explicit [01;36m[KMatrix[m[K(internal::constructor_without_unaligned_array_assert)
+              [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:267:14:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:259:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix() [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K() : Base()
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:259:25:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 3 provided
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:60:18:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+     float _u[0] =[01;31m[K0.0f[m[K, _u[1] =0.0f, _u[2] =0.0f, _u[3] = 0.0f; // motor ouput
+                  [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:60:31:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+     float _u[0] =0.0f, _u[1] =[01;31m[K0.0f[m[K, _u[2] =0.0f, _u[3] = 0.0f; // motor ouput
+                               [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:60:44:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+     float _u[0] =0.0f, _u[1] =0.0f, _u[2] =[01;31m[K0.0f[m[K, _u[3] = 0.0f; // motor ouput
+                                            [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:60:58:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+     float _u[0] =0.0f, _u[1] =0.0f, _u[2] =0.0f, _u[3] = [01;31m[K0.0f[m[K; // motor ouput
+                                                          [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:61:19:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+  float _omega[0] =[01;31m[K0.0f[m[K, _omega[1] =0.0f, _omega[2] =0.0f, _omega[3] = 0.0f; // angular velocity of motor
+                   [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:61:36:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+  float _omega[0] =0.0f, _omega[1] =[01;31m[K0.0f[m[K, _omega[2] =0.0f, _omega[3] = 0.0f; // angular velocity of motor
+                                    [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:61:53:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+  float _omega[0] =0.0f, _omega[1] =0.0f, _omega[2] =[01;31m[K0.0f[m[K, _omega[3] = 0.0f; // angular velocity of motor
+                                                     [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:61:71:[m[K [01;31m[Kerror: [m[Karray must be initialized with a brace-enclosed initializer
+  float _omega[0] =0.0f, _omega[1] =0.0f, _omega[2] =0.0f, _omega[3] = [01;31m[K0.0f[m[K; // angular velocity of motor
+                                                                       [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:79:43:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KEigen::Matrix<float, 3, 1>::Matrix(float&, Eigen::Vector3f&, float&)[m[K’
+  Vector3f _Omega_dot = Vector3f(_p, _q, _r[01;31m[K)[m[K; // angular acceleration in inertial frame
+                                           [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:387:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::RotationBase<OtherDerived, ColsAtCompileTime>&)[m[K’
+     explicit [01;36m[KMatrix[m[K(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+              [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:387:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:79:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’ and ‘[01m[Kfloat[m[K’
+  Vector3f _Omega_dot = Vector3f(_p, _q, _r[01;36m[K)[m[K; // angular acceleration in inertial frame
+                                           [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:376:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&)[m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const EigenBase<OtherDerived> &other)
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:376:25:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:79:43:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::EigenBase<Derived>[m[K’ and ‘[01m[Kfloat[m[K’
+  Vector3f _Omega_dot = Vector3f(_p, _q, _r[01;36m[K)[m[K; // angular acceleration in inertial frame
+                                           [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:368:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const Matrix& other) : Base(other)
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:368:25:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:355:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Scalar&, const Scalar&, const Scalar&, const Scalar&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1; Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Scalar = float][m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const Scalar& x, const Scalar& y, const Scalar& z, const Scalar& w)
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:355:25:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:345:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Scalar&, const Scalar&, const Scalar&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1; Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Scalar = float][m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const Scalar& x, const Scalar& y, const Scalar& z)
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:345:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} to ‘[01m[Kconst Scalar&[m[K’ {aka ‘[01m[Kconst float&[m[K’}
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:299:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T0, class T1> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T0&, const T1&)[m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const T0& x, const T1& y)
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:299:25:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:79:43:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+  Vector3f _Omega_dot = Vector3f(_p, _q, _r[01;36m[K)[m[K; // angular acceleration in inertial frame
+                                           [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:291:34:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T&)[m[K’
+     EIGEN_STRONG_INLINE explicit [01;36m[KMatrix[m[K(const T& x)
+                                  [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:291:34:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:79:43:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+  Vector3f _Omega_dot = Vector3f(_p, _q, _r[01;36m[K)[m[K; // angular acceleration in inertial frame
+                                           [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:458[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:273:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+     [01;36m[KMatrix[m[K(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_constructible<Scalar>::value)
+     [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:273:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:267:14:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(Eigen::internal::constructor_without_unaligned_array_assert) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+     explicit [01;36m[KMatrix[m[K(internal::constructor_without_unaligned_array_assert)
+              [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:267:14:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:259:25:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix() [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K() : Base()
+                         [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:259:25:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 3 provided
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::updateForceandMoment()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:147:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_D[m[K’ was not declared in this scope
+         [01;31m[K_D[m[K = - _C_D * std::abs(_relative_velocity) * _relative_velocity;
+         [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:147:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_v[m[K’
+         [01;36m[K_D[m[K = - _C_D * std::abs(_relative_velocity) * _relative_velocity;
+         [01;36m[K^~[m[K
+         [32m[K_v[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:147:50:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kabs(Eigen::Vector3f&)[m[K’
+         _D = - _C_D * std::abs(_relative_velocity[01;31m[K)[m[K * _relative_velocity;
+                                                  [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/8/cstdlib:77[m[K,
+                 from [01m[K/usr/include/boost/config/platform/linux.hpp:15[m[K,
+                 from [01m[K/usr/include/boost/config.hpp:57[m[K,
+                 from [01m[K/usr/include/boost/type_traits/remove_reference.hpp:12[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/service_traits.h:31[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/devel/.private/dt_test_pkg/include/dt_test_pkg/ControlEval.h:8[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/usr/include/c++/8/bits/std_abs.h:56:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Klong int std::abs(long int)[m[K’
+   [01;36m[Kabs[m[K(long __i) { return __builtin_labs(__i); }
+   [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/8/bits/std_abs.h:56:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} to ‘[01m[Klong int[m[K’
+[01m[K/usr/include/c++/8/bits/std_abs.h:61:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Klong long int std::abs(long long int)[m[K’
+   [01;36m[Kabs[m[K(long long __x) { return __builtin_llabs (__x); }
+   [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/8/bits/std_abs.h:61:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} to ‘[01m[Klong long int[m[K’
+[01m[K/usr/include/c++/8/bits/std_abs.h:70:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr double std::abs(double)[m[K’
+   [01;36m[Kabs[m[K(double __x)
+   [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/8/bits/std_abs.h:70:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} to ‘[01m[Kdouble[m[K’
+[01m[K/usr/include/c++/8/bits/std_abs.h:74:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr float std::abs(float)[m[K’
+   [01;36m[Kabs[m[K(float __x)
+   [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/8/bits/std_abs.h:74:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} to ‘[01m[Kfloat[m[K’
+[01m[K/usr/include/c++/8/bits/std_abs.h:78:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr long double std::abs(long double)[m[K’
+   [01;36m[Kabs[m[K(long double __x)
+   [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/8/bits/std_abs.h:78:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} to ‘[01m[Klong double[m[K’
+[01m[K/usr/include/c++/8/bits/std_abs.h:84:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __int128 std::abs(__int128)[m[K’
+   [01;36m[Kabs[m[K(__GLIBCXX_TYPE_INT_N_0 __x) { return __x >= 0 ? __x : -__x; }
+   [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/8/bits/std_abs.h:84:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} to ‘[01m[K__int128[m[K’
+[01m[K/usr/include/c++/8/bits/std_abs.h:102:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __float128 std::abs(__float128)[m[K’
+   [01;36m[Kabs[m[K(__float128 __x)
+   [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/8/bits/std_abs.h:102:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} to ‘[01m[K__float128[m[K’
+In file included from [01m[K/usr/include/boost/config/no_tr1/complex.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/math/policies/error_handling.hpp:17[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:14[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/serialization.h:34[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/devel/.private/dt_test_pkg/include/dt_test_pkg/ControlEvalRequest.h:14[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/devel/.private/dt_test_pkg/include/dt_test_pkg/ControlEval.h:11[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/usr/include/c++/8/complex:618:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp std::abs(const std::complex<_Tp>&)[m[K’
+     [01;36m[Kabs[m[K(const complex<_Tp>& __z) { return __complex_abs(__z.__rep()); }
+     [01;36m[K^~~[m[K
+[01m[K/usr/include/c++/8/complex:618:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:147:50:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} is not derived from ‘[01m[Kconst std::complex<_Tp>[m[K’
+         _D = - _C_D * std::abs(_relative_velocity[01;36m[K)[m[K * _relative_velocity;
+                                                  [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/8/cstdlib:75[m[K,
+                 from [01m[K/usr/include/boost/config/platform/linux.hpp:15[m[K,
+                 from [01m[K/usr/include/boost/config.hpp:57[m[K,
+                 from [01m[K/usr/include/boost/type_traits/remove_reference.hpp:12[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/service_traits.h:31[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/devel/.private/dt_test_pkg/include/dt_test_pkg/ControlEval.h:8[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:2[m[K:
+[01m[K/usr/include/stdlib.h:840:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kint abs(int)[m[K’
+ extern int [01;36m[Kabs[m[K (int __x) __THROW __attribute__ ((__const__)) __wur;
+            [01;36m[K^~~[m[K
+[01m[K/usr/include/stdlib.h:840:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} to ‘[01m[Kint[m[K’
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:151:14:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+         for ([01;31m[Ki[m[K=0; i<3; i++){
+              [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:152:13:[m[K [01;31m[Kerror: [m[K‘[01m[K_T[m[K’ was not declared in this scope
+             [01;31m[K_T[m[K[i] = _C_T * rho * M_PI * pow(R, 4) * pow(_omega[i],2);
+             [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:152:13:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_v[m[K’
+             [01;36m[K_T[m[K[i] = _C_T * rho * M_PI * pow(R, 4) * pow(_omega[i],2);
+             [01;36m[K^~[m[K
+             [32m[K_v[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:152:21:[m[K [01;31m[Kerror: [m[K‘[01m[K_C_T[m[K’ was not declared in this scope
+             _T[i] = [01;31m[K_C_T[m[K * rho * M_PI * pow(R, 4) * pow(_omega[i],2);
+                     [01;31m[K^~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:152:21:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_C_D[m[K’
+             _T[i] = [01;36m[K_C_T[m[K * rho * M_PI * pow(R, 4) * pow(_omega[i],2);
+                     [01;36m[K^~~~[m[K
+                     [32m[K_C_D[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:152:28:[m[K [01;31m[Kerror: [m[K‘[01m[Krho[m[K’ was not declared in this scope
+             _T[i] = _C_T * [01;31m[Krho[m[K * M_PI * pow(R, 4) * pow(_omega[i],2);
+                            [01;31m[K^~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:154:23:[m[K [01;31m[Kerror: [m[K‘[01m[K_T[m[K’ was not declared in this scope
+         _sum_thrust = [01;31m[K_T[m[K[0] * _d[0] + _T[1] * _d[1] + _T[2] * _d[2] + _T[3] * _d[3];
+                       [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:154:23:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_v[m[K’
+         _sum_thrust = [01;36m[K_T[m[K[0] * _d[0] + _T[1] * _d[1] + _T[2] * _d[2] + _T[3] * _d[3];
+                       [01;36m[K^~[m[K
+                       [32m[K_v[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:154:31:[m[K [01;31m[Kerror: [m[K‘[01m[K_d[m[K’ was not declared in this scope
+         _sum_thrust = _T[0] * [01;31m[K_d[m[K[0] + _T[1] * _d[1] + _T[2] * _d[2] + _T[3] * _d[3];
+                               [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:154:31:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_v[m[K’
+         _sum_thrust = _T[0] * [01;36m[K_d[m[K[0] + _T[1] * _d[1] + _T[2] * _d[2] + _T[3] * _d[3];
+                               [01;36m[K^~[m[K
+                               [32m[K_v[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:160:14:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+         for ([01;31m[Ki[m[K=0; i<3; i++){
+              [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:162:70:[m[K [01;31m[Kerror: [m[K‘[01m[K_Q[m[K’ was not declared in this scope
+             _reaction_torque = _reaction_torque + pow((-1), (i+1)) * [01;31m[K_Q[m[K[i] * _d[i];
+                                                                      [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:162:70:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_v[m[K’
+             _reaction_torque = _reaction_torque + pow((-1), (i+1)) * [01;36m[K_Q[m[K[i] * _d[i];
+                                                                      [01;36m[K^~[m[K
+                                                                      [32m[K_v[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::newtonEulerMotionEquation()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:19:[m[K [01;31m[Kerror: [m[K‘[01m[KJ_inv[m[K’ was not declared in this scope
+      _Omega_dot = [01;31m[KJ_inv[m[K * (_Me_computed - _Omega.cross(J * _Omega)); // conservation of angular momentum
+                   [01;31m[K^~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:19:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Ku_int[m[K’
+      _Omega_dot = [01;36m[KJ_inv[m[K * (_Me_computed - _Omega.cross(J * _Omega)); // conservation of angular momentum
+                   [01;36m[K^~~~~[m[K
+                   [32m[Ku_int[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:58:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[K<unresolved overloaded function type>[m[K’ and ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’})
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross([01;31m[KJ * _Omega[m[K)); // conservation of angular momentum
+                                                        [01;31m[K~~^~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:487[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:543:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MatrixDerived, class PermutationDerived> const Eigen::Product<MatrixDerived, PermutationDerived, 2> Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::PermutationBase<PermutationDerived>&)[m[K’
+ [01;36m[Koperator[m[K*(const MatrixBase<MatrixDerived> &matrix,
+ [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:543:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’ and ‘[01m[Kint (QuadDynamicModel::*)(int)[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * [01;36m[K_Omega[m[K)); // conservation of angular momentum
+                                                            [01;36m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’ and ‘[01m[KEigen::DiagonalMatrix<float, -1> (QuadDynamicModel::*)(...)[m[K’
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::PermutationBase<PermutationDerived>[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:487[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:555:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class PermutationDerived, class MatrixDerived> const Eigen::Product<MatrixDerived, PermutationDerived, 2> Eigen::operator*(const Eigen::PermutationBase<PermutationDerived>&, const Eigen::MatrixBase<U>&)[m[K’
+ [01;36m[Koperator[m[K*(const PermutationBase<PermutationDerived> &permutation,
+ [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/PermutationMatrix.h:555:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::PermutationBase<PermutationDerived>[m[K’ and ‘[01m[Kint (QuadDynamicModel::*)(int)[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * [01;36m[K_Omega[m[K)); // conservation of angular momentum
+                                                            [01;36m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::PermutationBase<PermutationDerived>[m[K’ and ‘[01m[KEigen::DiagonalMatrix<float, -1> (QuadDynamicModel::*)(...)[m[K’
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[KPermutationDerived[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:488[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Transpositions.h:338:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MatrixDerived, class TranspositionsDerived> const Eigen::Product<MatrixDerived, PermutationDerived, 2> Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::TranspositionsBase<TranspositionsDerived>&)[m[K’
+ [01;36m[Koperator[m[K*(const MatrixBase<MatrixDerived> &matrix,
+ [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Transpositions.h:338:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’ and ‘[01m[Kint (QuadDynamicModel::*)(int)[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * [01;36m[K_Omega[m[K)); // conservation of angular momentum
+                                                            [01;36m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’ and ‘[01m[KEigen::DiagonalMatrix<float, -1> (QuadDynamicModel::*)(...)[m[K’
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::TranspositionsBase<TranspositionsDerived>[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:488[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Transpositions.h:350:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class TranspositionsDerived, class MatrixDerived> const Eigen::Product<MatrixDerived, PermutationDerived, 2> Eigen::operator*(const Eigen::TranspositionsBase<TranspositionsDerived>&, const Eigen::MatrixBase<U>&)[m[K’
+ [01;36m[Koperator[m[K*(const TranspositionsBase<TranspositionsDerived> &transpositions,
+ [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Transpositions.h:350:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::TranspositionsBase<TranspositionsDerived>[m[K’ and ‘[01m[Kint (QuadDynamicModel::*)(int)[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * [01;36m[K_Omega[m[K)); // conservation of angular momentum
+                                                            [01;36m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::TranspositionsBase<TranspositionsDerived>[m[K’ and ‘[01m[KEigen::DiagonalMatrix<float, -1> (QuadDynamicModel::*)(...)[m[K’
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[KTranspositionsDerived[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/Householder:24[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/QR:17[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:4[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:438:99:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived, class VectorsType, class CoeffsType, int Side> typename Eigen::internal::matrix_type_times_scalar_type<typename VectorsType::Scalar, OtherDerived>::Type Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::HouseholderSequence<VectorsType, CoeffsType, Side>&)[m[K’
+ typename internal::matrix_type_times_scalar_type<typename VectorsType::Scalar,OtherDerived>::Type [01;36m[Koperator[m[K*(const MatrixBase<OtherDerived>& other, const HouseholderSequence<VectorsType,CoeffsType,Side>& h)
+                                                                                                   [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Householder/HouseholderSequence.h:438:99:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’ and ‘[01m[Kint (QuadDynamicModel::*)(int)[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * [01;36m[K_Omega[m[K)); // conservation of angular momentum
+                                                            [01;36m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’ and ‘[01m[KEigen::DiagonalMatrix<float, -1> (QuadDynamicModel::*)(...)[m[K’
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::HouseholderSequence<VectorsType, CoeffsType, Side>[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/Geometry:46[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:6[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Scaling.h:117:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Derived, class Scalar> Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<typename Eigen::internal::traits<T>::Scalar, Scalar>, const Derived, const typename Eigen::internal::plain_constant_type<Expr, Scalar>::type> Eigen::operator*(const Eigen::MatrixBase<Derived>&, const Eigen::UniformScaling<Scalar>&)[m[K’
+ [01;36m[Koperator[m[K*(const MatrixBase<Derived>& matrix, const UniformScaling<Scalar>& s)
+ [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Geometry/Scaling.h:117:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’ and ‘[01m[Kint (QuadDynamicModel::*)(int)[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * [01;36m[K_Omega[m[K)); // conservation of angular momentum
+                                                            [01;36m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::MatrixBase<Derived>[m[K’ and ‘[01m[KEigen::DiagonalMatrix<float, -1> (QuadDynamicModel::*)(...)[m[K’
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::UniformScaling<Scalar>[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/SparseCore:62[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Sparse:26[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:2[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:147:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class SparseDerived, class PermDerived> const Eigen::Product<MatrixDerived, PermutationDerived, 2> Eigen::operator*(const Eigen::SparseMatrixBase<OtherDerived>&, const Eigen::PermutationBase<PermutationDerived>&)[m[K’
+ [01;36m[Koperator[m[K*(const SparseMatrixBase<SparseDerived>& matrix, const PermutationBase<PermDerived>& perm)
+ [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:147:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::SparseMatrixBase<OtherDerived>[m[K’ and ‘[01m[Kint (QuadDynamicModel::*)(int)[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * [01;36m[K_Omega[m[K)); // conservation of angular momentum
+                                                            [01;36m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::SparseMatrixBase<OtherDerived>[m[K’ and ‘[01m[KEigen::DiagonalMatrix<float, -1> (QuadDynamicModel::*)(...)[m[K’
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::PermutationBase<PermutationDerived>[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/SparseCore:62[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Sparse:26[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:2[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:154:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class SparseDerived, class PermDerived> const Eigen::Product<PermDerived, SparseDerived, 2> Eigen::operator*(const Eigen::PermutationBase<PermutationDerived>&, const Eigen::SparseMatrixBase<OtherDerived>&)[m[K’
+ [01;36m[Koperator[m[K*( const PermutationBase<PermDerived>& perm, const SparseMatrixBase<SparseDerived>& matrix)
+ [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:154:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::PermutationBase<PermutationDerived>[m[K’ and ‘[01m[Kint (QuadDynamicModel::*)(int)[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * [01;36m[K_Omega[m[K)); // conservation of angular momentum
+                                                            [01;36m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::PermutationBase<PermutationDerived>[m[K’ and ‘[01m[KEigen::DiagonalMatrix<float, -1> (QuadDynamicModel::*)(...)[m[K’
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::SparseMatrixBase<OtherDerived>[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/SparseCore:62[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Sparse:26[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:2[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:162:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class SparseDerived, class PermutationType> const Eigen::Product<SparseDerived, Eigen::Inverse<Rhs>, 2> Eigen::operator*(const Eigen::SparseMatrixBase<OtherDerived>&, const Eigen::InverseImpl<PermutationType, Eigen::PermutationStorage>&)[m[K’
+ [01;36m[Koperator[m[K*(const SparseMatrixBase<SparseDerived>& matrix, const InverseImpl<PermutationType, PermutationStorage>& tperm)
+ [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:162:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::SparseMatrixBase<OtherDerived>[m[K’ and ‘[01m[Kint (QuadDynamicModel::*)(int)[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * [01;36m[K_Omega[m[K)); // conservation of angular momentum
+                                                            [01;36m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::SparseMatrixBase<OtherDerived>[m[K’ and ‘[01m[KEigen::DiagonalMatrix<float, -1> (QuadDynamicModel::*)(...)[m[K’
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::InverseImpl<PermutationType, Eigen::PermutationStorage>[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/SparseCore:62[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Sparse:26[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:2[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:171:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class SparseDerived, class PermutationType> const Eigen::Product<Eigen::Inverse<Rhs>, SparseDerived, 2> Eigen::operator*(const Eigen::InverseImpl<PermutationType, Eigen::PermutationStorage>&, const Eigen::SparseMatrixBase<OtherDerived>&)[m[K’
+ [01;36m[Koperator[m[K*(const InverseImpl<PermutationType,PermutationStorage>& tperm, const SparseMatrixBase<SparseDerived>& matrix)
+ [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:171:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::InverseImpl<PermutationType, Eigen::PermutationStorage>[m[K’ and ‘[01m[Kint (QuadDynamicModel::*)(int)[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * [01;36m[K_Omega[m[K)); // conservation of angular momentum
+                                                            [01;36m[K^~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::InverseImpl<PermutationType, Eigen::PermutationStorage>[m[K’ and ‘[01m[KEigen::DiagonalMatrix<float, -1> (QuadDynamicModel::*)(...)[m[K’
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 3, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::SparseMatrixBase<OtherDerived>[m[K’
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:88[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:50:29:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> typename Eigen::internal::enable_if<true, const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<typename Eigen::internal::promote_scalar_arg<float, T, Eigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<T, float, Eigen::internal::scalar_product_op<T, float> > >::value>::type, float>, const typename Eigen::internal::plain_constant_type<Eigen::Matrix<float, 3, 1>, typename Eigen::internal::promote_scalar_arg<float, T, Eigen::internal::has_ReturnType<Eigen::ScalarBinaryOpTraits<T, float, Eigen::internal::scalar_product_op<T, float> > >::value>::type>::type, const Eigen::Matrix<float, 3, 1> > >::type Eigen::operator*(const T&, const StorageBaseType&)[m[K’
+ EIGEN_MAKE_SCALAR_BINARY_OP([01;36m[Koperator[m[K*,product)
+                             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:990:4:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_MAKE_SCALAR_BINARY_OP_ONTHELEFT[m[K’
+   ([01;36m[KMETHOD[m[K)(const T& scalar, const StorageBaseType& matrix) { \
+    [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:50:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_MAKE_SCALAR_BINARY_OP[m[K’
+ [01;36m[KEIGEN_MAKE_SCALAR_BINARY_OP[m[K(operator*,product)
+ [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:50:29:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+ EIGEN_MAKE_SCALAR_BINARY_OP([01;36m[Koperator[m[K*,product)
+                             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Macros.h:990:4:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KEIGEN_MAKE_SCALAR_BINARY_OP_ONTHELEFT[m[K’
+   ([01;36m[KMETHOD[m[K)(const T& scalar, const StorageBaseType& matrix) { \
+    [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h:50:1:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KEIGEN_MAKE_SCALAR_BINARY_OP[m[K’
+ [01;36m[KEIGEN_MAKE_SCALAR_BINARY_OP[m[K(operator*,product)
+ [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:60:[m[K [01;36m[Knote: [m[K  couldn't deduce template parameter ‘[01m[KT[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * [01;36m[K_Omega[m[K)); // conservation of angular momentum
+                                                            [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:475[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:82:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst Eigen::DiagonalWrapper<const Eigen::CwiseBinaryOp<Eigen::internal::scalar_product_op<float, float>, const Eigen::CwiseNullaryOp<Eigen::internal::scalar_constant_op<float>, const Eigen::Matrix<float, -1, 1> >, const Eigen::Matrix<float, -1, 1> > > Eigen::operator*(const Scalar&, const Eigen::DiagonalBase<Eigen::DiagonalMatrix<float, -1> >&)[m[K’
+     [01;36m[Koperator[m[K*(const Scalar& scalar, const DiagonalBase& other)
+     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:82:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<unresolved overloaded function type>[m[K’ to ‘[01m[Kconst Scalar&[m[K’ {aka ‘[01m[Kconst float&[m[K’}
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
