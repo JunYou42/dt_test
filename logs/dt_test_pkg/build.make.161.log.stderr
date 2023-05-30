@@ -1,0 +1,46 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:31:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+     geometry_msgs::Twist [01;31m[Kcurrent_velocity[m[K
+                          [01;31m[K^~~~~~~~~~~~~~~~[m[K
+                                          [32m[K;[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In constructor ‘[01m[KQuadDynamicModel::QuadDynamicModel()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:100:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kvel_sub[m[K’ was not declared in this scope
+         [01;31m[Kvel_sub[m[K = nh_.subscribe("/physical_entity/local_position/velocity",10, &QuadDynamicModel::velCallBack,this);
+         [01;31m[K^~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:100:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kpose_sub[m[K’
+         [01;36m[Kvel_sub[m[K = nh_.subscribe("/physical_entity/local_position/velocity",10, &QuadDynamicModel::velCallBack,this);
+         [01;36m[K^~~~~~~[m[K
+         [32m[Kpose_sub[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::velCallBack(const ConstPtr&)[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:140:29:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kgeometry_msgs::Twist[m[K’ {aka ‘[01m[Kgeometry_msgs::Twist_<std::allocator<void> >[m[K’} and ‘[01m[Kconst geometry_msgs::Pose_<std::allocator<void> >[m[K’)
+         current_velocity = *[01;31m[Kmsg[m[K;
+                             [01;31m[K^~~[m[K
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:16[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/opt/ros/noetic/include/geometry_msgs/Twist.h:24:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr geometry_msgs::Twist_<std::allocator<void> >& geometry_msgs::Twist_<std::allocator<void> >::operator=(const geometry_msgs::Twist_<std::allocator<void> >&)[m[K’
+ struct [01;36m[KTwist_[m[K
+        [01;36m[K^~~~~~[m[K
+[01m[K/opt/ros/noetic/include/geometry_msgs/Twist.h:24:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst geometry_msgs::Pose_<std::allocator<void> >[m[K’ to ‘[01m[Kconst geometry_msgs::Twist_<std::allocator<void> >&[m[K’
+[01m[K/opt/ros/noetic/include/geometry_msgs/Twist.h:24:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr geometry_msgs::Twist_<std::allocator<void> >& geometry_msgs::Twist_<std::allocator<void> >::operator=(geometry_msgs::Twist_<std::allocator<void> >&&)[m[K’
+[01m[K/opt/ros/noetic/include/geometry_msgs/Twist.h:24:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst geometry_msgs::Pose_<std::allocator<void> >[m[K’ to ‘[01m[Kgeometry_msgs::Twist_<std::allocator<void> >&&[m[K’
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::updateModelParameters()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:165:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Quaternion[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Quaternion_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kquaternion[m[K’; did you mean ‘[01m[KQuaternion_[m[K’?
+         Matrix3f _R_I_MB = _quat.[01;31m[Kquaternion[m[K.toRotationMatrix();
+                                  [01;31m[K^~~~~~~~~~[m[K
+                                  [32m[KQuaternion_[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:170:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Twist[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Twist_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ktwist[m[K’; did you mean ‘[01m[KTwist_[m[K’?
+         _v = _R_IB * Vector3f(current_velocity.[01;31m[Ktwist[m[K.linear.x,
+                                                [01;31m[K^~~~~[m[K
+                                                [32m[KTwist_[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:171:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Twist[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Twist_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ktwist[m[K’; did you mean ‘[01m[KTwist_[m[K’?
+             current_velocity.[01;31m[Ktwist[m[K.linear.y,
+                              [01;31m[K^~~~~[m[K
+                              [32m[KTwist_[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Twist[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Twist_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ktwist[m[K’; did you mean ‘[01m[KTwist_[m[K’?
+             current_velocity.[01;31m[Ktwist[m[K.linear.z);
+                              [01;31m[K^~~~~[m[K
+                              [32m[KTwist_[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

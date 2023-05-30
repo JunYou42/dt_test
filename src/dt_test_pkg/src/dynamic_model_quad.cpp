@@ -11,8 +11,10 @@
 #include <mavros_msgs/CommandBool.h>
 #include <mavros_msgs/SetMode.h>
 #include <mavros_msgs/State.h>
+#include <mavros_msgs/ESCStatus.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <geometry_msgs/Pose.h>
+#include <geometry_msgs/Twist.h>
 // LOCAL
 #include <dt_test_pkg/Wind.h>
 
@@ -26,40 +28,45 @@ private:
     bool stop_thread=false;
 
     mavros_msgs::State  current_state;
+    mavros_msgs::ESCStatus  current_esc;
     geometry_msgs::Pose current_pose;
-    Vector3f   current_wind;
+    geometry_msgs::Twist current_velocity;
+    Vector3f   current_wind = Vector3f(0.0f, 0.0f, 0.0f) ;;
 
     ros::Subscriber pose_sub;
+    ros::Subscriber vel_sub;
     ros::Subscriber wind_sub;
     ros::Subscriber state_sub;
+    ros::Subscriber esc_sub;
 
     
     //constant model parameter:
-    const float m = 1.0f; // mass of quadrotor
-    const float R = 1.0f;  // radius of rotor
-    static constexpr int NB = 4; // number of blade
-    const float g = 9.8; // gravaty acceleration
-    const float rho = 1.225f; // gravaty acceleration
-    const Matrix3f J = Matrix3f::Ones();// inertia matrix
-
-    Matrix3f J_inv = J.inverse();
+    const float m = 1.02; // mass of quadrotor 
+    const float R = 0.13/2;  // radius of rotor 
+    const float l = 0.14;  // arm length
+    static constexpr int NB = 3; // number of blade
+    const float g = 9.81; // gravaty acceleration [kg/m^3]
+    const float rho = 1.225f; // air density 
+    Matrix3f J = Matrix3f::Identity();// inertia matrix
+    Matrix3f J_inv;
 	    //_Im1 = 100.0f * inv(static_cast<typeof _I>(100.0f * _I));
 	Vector3f G = Vector3f(0.0f, 0.0f, - m * g); // gravity applied on quadrotor
     
     Vector3f r[4]= {
-        Vector3f(0, 0, 1),
-        Vector3f(0, 0, 1),
-        Vector3f(0, 0, 1),
-        Vector3f(0, 0, 1)
-    }; 
+        Vector3f(l, 0, 0),
+        Vector3f(0, l, 0),
+        Vector3f(-l, 0, 0),
+        Vector3f(0, -l, 0)
+    }; // 
+
 
     //time varying model parameter:
-	Eigen::Matrix3f       _R_IB{};          // body to inertial transformation
+	Matrix3f _R_IB;          // body to inertial transformation
     
 	Vector3f _v = Vector3f(0.0f, 0.0f, 0.0f); // velocity in inertial frame
-    geometry_msgs::Quaternion _quat; //Quaternionf _quat(1, 0, 0, 0);
-    float _p =0.0f, _q =0.0f, _r = 0.0f;
-	Vector3f _Omega = Vector3f(_p, _q, _r); // angular velocity in inertial frame 
+    Quaternionf _quat; //Quaternionf _quat(1, 0, 0, 0);
+    float _p = 0.0f, _y = 0.0f, _r = 0.0f;
+	Vector3f _Omega;// angular velocity in body frame 
 	
     float _u[4] = {0.0f, 0.0f, 0.0f, 0.0f};
 	float _omega[4] = {0.0f, 0.0f, 0.0f, 0.0f};// angular velocity of motor
@@ -71,6 +78,7 @@ private:
         Vector3f(0, 0, 1)
     }; // direction of j-th rotor in body frame
     
+
     // coefficients
     float _C_T;
     float _C_Q;
@@ -81,21 +89,23 @@ private:
 	float _T[4];           // thrust force generated in body frame [N]
 	float  _Q[4];           // torque generated in body frame [N]
 	Vector3f _v_dot = Vector3f(0.0f, 0.0f, 0.0f); // acceleration in inertial frame
-	Vector3f _Omega_dot = Vector3f(_p, _q, _r); // angular acceleration in inertial frame
+	Vector3f _Omega_dot; // angular acceleration in inertial frame
 
-	Eigen::Vector3f _Fe_computed;	// resultant force in inertial frame
-	Eigen::Vector3f _Me_computed;	// resultant moment
-	Eigen::Vector3f _D_computed;	// aerodynamic drag in inertial frame
+	Vector3f _Fe_computed;	// resultant force in inertial frame
+	Vector3f _Me_computed;	// resultant moment
+	Vector3f _D_computed;	// aerodynamic drag in inertial frame
 
 public:
     QuadDynamicModel() 
     {
         // update the ROS topics
         state_sub = nh_.subscribe<mavros_msgs::State>("mavros/state", 10, &QuadDynamicModel::stateCallBack, this);
+        esc_sub = nh_.subscribe<mavros_msgs::ESCStatus>("mavros/esc_status", 10, &QuadDynamicModel::escCallBack, this);
         pose_sub = nh_.subscribe("/physical_entity/local_position/pose",10, &QuadDynamicModel::poseCallBack,this);
+        vel_sub = nh_.subscribe("/physical_entity/local_position/velocity",10, &QuadDynamicModel::velCallBack,this);
         wind_sub = nh_.subscribe("/weather/wind",10, &QuadDynamicModel::windCallBack,this);
 
-        // update dynamic mdoel
+        // update dynamic mdoelpose
         updateModelParameters();
         updateForceandMoment();
         newtonEulerMotionEquation();
@@ -127,7 +137,18 @@ public:
 
     void poseCallBack(const geometry_msgs::Pose::ConstPtr& msg ){
         current_pose = *msg;
-        // ROS_INFO_STREAM("[poseCallBack] Get pose data.");
+        // ROS_INFO_STREAM("[QuadModel][poseCallBack] Get pose data.");
+
+    }
+
+    void velCallBack(const geometry_msgs::Twist::ConstPtr& msg ){
+        current_velocity = *msg;
+        // ROS_INFO_STREAM("[velCallBack] Get pose data.");
+
+    }
+    void escCallBack(const mavros_msgs::ESCStatus::ConstPtr& msg ){
+        current_esc= *msg;
+        // ROS_INFO_STREAM("[escCallBack] Get pose data.");
 
     }
 
@@ -141,13 +162,38 @@ public:
 
     void updateModelParameters(){
         // read parameter
-        _quat.x = 1.0f;
-        _quat.y = 1.0f;
-        _quat.z = 1.0f;
-        _quat.w = 1.0f;
+        J << 0.0051, 0, 0,
+            0, 0.0051, 0,
+            0, 0, 0.0096;
+        J_inv = J.inverse(); 
+        
+        _quat.x() = current_pose.orientation.x;
+        _quat.y()  =  current_pose.orientation.y;
+        _quat.z()  = current_pose.orientation.z;
+        _quat.w()  = current_pose.orientation.w;
+        Matrix3f _R_IB = _quat.toRotationMatrix();
+        AngleAxisf _rotation(M_PI/4, Vector3f::UnitZ());
+        Matrix3f _R_MB_CB = _rotation.toRotationMatrix();
 
-        // update coefficients
-    
+        _v = Vector3f(current_velocity.linear.x,
+            current_velocity.linear.y,
+            current_velocity.linear.z); // inertial frame ??
+
+        _r = current_velocity.angular.x;
+        _p = current_velocity.angular.y;
+        _y = current_velocity.angular.z;
+        _Omega = Vector3f(_r, _p, _y); // body frame
+
+        for (int i=0; i<4; i++){
+        _u[i] = current_esc.esc_status[i].rpm;
+        _omega[i] = 2 * M_PI * _u[i]/60;
+        }
+        // ROS_INFO_STREAM("[QuadModel][updateModelParameters] Get rotor 1 speed." << _omega[0] );
+
+        // update coefficients  // _TODO_
+        _C_T = 2.49e-6/( rho * M_PI * pow(R, 4)); 
+        _C_Q = 4.62e-8/( rho * M_PI * pow(R, 5));
+        _C_D = 0.0285; // D= - _C_D * v_rel^2
     }
 
     void updateForceandMoment(){
@@ -155,23 +201,28 @@ public:
         Vector3f _relative_velocity = _v - current_wind;
         _D_computed = - _C_D * _relative_velocity.norm() * _relative_velocity;
 
-        // resultant Thrust
+        // resultant Thrust -- inertial frame
         Vector3f _sum_thrust;
-        for (int i=0; i<3; i++){
+        for (int i=0; i<4; i++){
             _T[i] = _C_T * rho * M_PI * pow(R, 4) * pow(_omega[i],2);
         }
         _sum_thrust = _T[0] * _d[0] + _T[1] * _d[1] + _T[2] * _d[2] + _T[3] * _d[3];
         _Fe_computed = G + _D_computed + _R_IB * _sum_thrust;
 
-        // resultant Torque
+        // resultant Torque -- body frame
         Vector3f _thrust_moment = Vector3f(0.0f, 0.0f, 0.0f) ;
         Vector3f _reaction_torque = Vector3f(0.0f, 0.0f, 0.0f) ;
-        for (int i=0; i<3; i++){
+        for (int i=0; i<4; i++){
+            _Q[i] = _C_Q * rho * M_PI * pow(R, 5) * pow(_omega[i],2);
             _thrust_moment = _thrust_moment + r[i].cross(_T[i] * _d[i]);
-            _reaction_torque = _reaction_torque + pow((-1), (i+1)) * _Q[i] * _d[i];
+            _reaction_torque = _reaction_torque + pow((-1), (i+1)) * _Q[i] * _d[i]; // _TODO_ notice direction
         }
 
         _Me_computed = _thrust_moment + _reaction_torque;// _TODO_ missing damper
+
+        // ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _D_computed: " << _D_computed );
+        // ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Fe_computed:" << _Fe_computed );
+        // ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Me_computed:" << _Me_computed );
 
     }
 
@@ -179,6 +230,8 @@ public:
 
 	    _v_dot = _Fe_computed/ m;   // conservation of linear momentum
 	    _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * _Omega)); // conservation of angular momentum
+        // ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _v_dot:" << _v_dot );
+        // ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _Omega_dot:" << _Omega_dot );
 
     }
 

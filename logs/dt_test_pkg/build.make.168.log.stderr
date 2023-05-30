@@ -1,0 +1,12 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::updateModelParameters()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:176:9:[m[K [01;31m[Kerror: [m[K‘[01m[K_y[m[K’ was not declared in this scope
+         [01;31m[K_y[m[K = current_velocity.angular.z;
+         [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:176:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_v[m[K’
+         [01;36m[K_y[m[K = current_velocity.angular.z;
+         [01;36m[K^~[m[K
+         [32m[K_v[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,17 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::updateModelParameters()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:171:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Twist[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Twist_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ktwist[m[K’; did you mean ‘[01m[KTwist_[m[K’?
+         _v = _R_IB * Vector3f(current_velocity.[01;31m[Ktwist[m[K.linear.x,
+                                                [01;31m[K^~~~~[m[K
+                                                [32m[KTwist_[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:172:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Twist[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Twist_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ktwist[m[K’; did you mean ‘[01m[KTwist_[m[K’?
+             current_velocity.[01;31m[Ktwist[m[K.linear.y,
+                              [01;31m[K^~~~~[m[K
+                              [32m[KTwist_[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:173:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Twist[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Twist_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ktwist[m[K’; did you mean ‘[01m[KTwist_[m[K’?
+             current_velocity.[01;31m[Ktwist[m[K.linear.z);
+                              [01;31m[K^~~~~[m[K
+                              [32m[KTwist_[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

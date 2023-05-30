@@ -11,9 +11,13 @@ CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/geom
 CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/geometry_msgs/Pose.h
 CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseStamped.h
 CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/geometry_msgs/Quaternion.h
+CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/geometry_msgs/Twist.h
+CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
 CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/mavros_msgs/CommandBool.h
 CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/mavros_msgs/CommandBoolRequest.h
 CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/mavros_msgs/CommandBoolResponse.h
+CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/mavros_msgs/ESCStatus.h
+CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/mavros_msgs/ESCStatusItem.h
 CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetMode.h
 CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetModeRequest.h
 CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o: /opt/ros/noetic/include/mavros_msgs/SetModeResponse.h

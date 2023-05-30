@@ -6,6 +6,9 @@ CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o: /opt/ros/noetic/includ
 CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o: /opt/ros/noetic/include/geometry_msgs/Pose.h
 CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o: /opt/ros/noetic/include/geometry_msgs/PoseStamped.h
 CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o: /opt/ros/noetic/include/geometry_msgs/Quaternion.h
+CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o: /opt/ros/noetic/include/geometry_msgs/Twist.h
+CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o: /opt/ros/noetic/include/geometry_msgs/TwistStamped.h
+CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o: /opt/ros/noetic/include/geometry_msgs/Vector3.h
 CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o: /opt/ros/noetic/include/ros/assert.h

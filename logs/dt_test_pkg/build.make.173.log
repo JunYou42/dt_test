@@ -1,0 +1,29 @@
+[35m[1mScanning dependencies of target physical_entity[0m
+[  5%] [32mBuilding CXX object CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o[0m
+[  5%] Built target _dt_test_pkg_generate_messages_check_deps_Wind
+[  5%] Built target _dt_test_pkg_generate_messages_check_deps_ControlEval
+[  5%] Built target std_msgs_generate_messages_py
+[  5%] Built target geometry_msgs_generate_messages_py
+[  5%] Built target std_msgs_generate_messages_nodejs
+[  5%] Built target sensor_msgs_generate_messages_py
+[  5%] Built target geometry_msgs_generate_messages_nodejs
+[  5%] Built target sensor_msgs_generate_messages_nodejs
+[  5%] Built target geometry_msgs_generate_messages_eus
+[  5%] Built target std_msgs_generate_messages_eus
+[  5%] Built target std_msgs_generate_messages_cpp
+[  5%] Built target sensor_msgs_generate_messages_eus
+[  5%] Built target geometry_msgs_generate_messages_cpp
+[  5%] Built target sensor_msgs_generate_messages_cpp
+[  5%] Built target geometry_msgs_generate_messages_lisp
+[  5%] Built target sensor_msgs_generate_messages_lisp
+[  5%] Built target std_msgs_generate_messages_lisp
+[ 15%] Built target weather
+[ 26%] Built target dt_test_pkg_generate_messages_nodejs
+[ 36%] Built target digital_twin
+[ 57%] Built target dt_test_pkg_generate_messages_py
+[ 73%] Built target dt_test_pkg_generate_messages_eus
+[ 84%] Built target dt_test_pkg_generate_messages_cpp
+[ 94%] Built target dt_test_pkg_generate_messages_lisp
+[ 94%] Built target dt_test_pkg_generate_messages
+[100%] [32m[1mLinking CXX executable /home/roku/workspace_jun/dt_test/devel/.private/dt_test_pkg/lib/dt_test_pkg/physical_entity[0m
+[100%] Built target physical_entity

@@ -1,0 +1,51 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::updateModelParameters()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:143:11:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[Kconst Matrix3f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 3, 3>[m[K’} and ‘[01m[Kint[m[K’)
+         [01;31m[KJ << 1[m[K, 2, 3,
+         [01;31m[K~~^~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:482[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:3[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/CommaInitializer.h:144:34:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::CommaInitializer<Derived> Eigen::DenseBase<Derived>::operator<<(const Scalar&) [with Derived = Eigen::Matrix<float, 3, 3>; Eigen::DenseBase<Derived>::Scalar = float][m[K’ <near match>
+ inline CommaInitializer<Derived> [01;36m[KDenseBase<Derived>[m[K::operator<< (const Scalar& s)
+                                  [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/CommaInitializer.h:144:34:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Matrix3f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 3, 3>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:435[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:3[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:317:31:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::CommaInitializer<Derived> Eigen::DenseBase<Derived>::operator<<(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; Derived = Eigen::Matrix<float, 3, 3>][m[K’
+     CommaInitializer<Derived> [01;36m[Koperator[m[K<< (const DenseBase<OtherDerived>& other);
+                               [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:317:31:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:143:14:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::DenseBase<Derived>[m[K’ and ‘[01m[Kint[m[K’
+         J << [01;36m[K1[m[K, 2, 3,
+              [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/node_handle.h:52[m[K,
+                 from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:7[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h:207:29:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::ostream& operator<<(std::ostream&, const XmlRpc::XmlRpcValue&)[m[K’
+ XMLRPCPP_DECL std::ostream& [01;36m[Koperator[m[K<<(std::ostream& os, const XmlRpc::XmlRpcValue& v);
+                             [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h:207:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst Matrix3f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 3, 3>[m[K’} to ‘[01m[Kstd::ostream&[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>&[m[K’}
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:433[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Eigen:1[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:3[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/IO.h:216:16:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Derived> std::ostream& Eigen::operator<<(std::ostream&, const Eigen::DenseBase<Derived>&)[m[K’
+ std::ostream & [01;36m[Koperator[m[K <<
+                [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/IO.h:216:16:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:143:14:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::DenseBase<Derived>[m[K’ and ‘[01m[Kint[m[K’
+         J << [01;36m[K1[m[K, 2, 3,
+              [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

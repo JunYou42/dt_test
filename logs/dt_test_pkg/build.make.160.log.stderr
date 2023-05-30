@@ -1,0 +1,51 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:30:20:[m[K [01;31m[Kerror: [m[K‘[01m[KTwist[m[K’ in namespace ‘[01m[Kgeometry_msgs[m[K’ does not name a type
+     geometry_msgs::[01;31m[KTwist[m[K current_velocity
+                    [01;31m[K^~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In constructor ‘[01m[KQuadDynamicModel::QuadDynamicModel()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:99:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kvel_sub[m[K’ was not declared in this scope
+         [01;31m[Kvel_sub[m[K = nh_.subscribe("/physical_entity/local_position/velocity",10, &QuadDynamicModel::velCallBack,this);
+         [01;31m[K^~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:99:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kpose_sub[m[K’
+         [01;36m[Kvel_sub[m[K = nh_.subscribe("/physical_entity/local_position/velocity",10, &QuadDynamicModel::velCallBack,this);
+         [01;36m[K^~~~~~~[m[K
+         [32m[Kpose_sub[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::velCallBack(const ConstPtr&)[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:139:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_velocity[m[K’ was not declared in this scope
+         [01;31m[Kcurrent_velocity[m[K = *msg;
+         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:139:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kcurrent_state[m[K’
+         [01;36m[Kcurrent_velocity[m[K = *msg;
+         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+         [32m[Kcurrent_state[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::windCallBack(const ConstPtr&)[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:146:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_wind[m[K’ was not declared in this scope
+         [01;31m[Kcurrent_wind[m[K = Vector3f(msg->wind_x,
+         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:146:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kcurrent_pose[m[K’
+         [01;36m[Kcurrent_wind[m[K = Vector3f(msg->wind_x,
+         [01;36m[K^~~~~~~~~~~~[m[K
+         [32m[Kcurrent_pose[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::updateModelParameters()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:164:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Quaternion[m[K’ {aka ‘[01m[Kstruct geometry_msgs::Quaternion_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kquaternion[m[K’; did you mean ‘[01m[KQuaternion_[m[K’?
+         Matrix3f _R_I_MB = _quat.[01;31m[Kquaternion[m[K.toRotationMatrix();
+                                  [01;31m[K^~~~~~~~~~[m[K
+                                  [32m[KQuaternion_[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:169:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_velocity[m[K’ was not declared in this scope
+         _v = _R_IB * Vector3f([01;31m[Kcurrent_velocity[m[K.twist.linear.x,
+                               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:169:31:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kcurrent_state[m[K’
+         _v = _R_IB * Vector3f([01;36m[Kcurrent_velocity[m[K.twist.linear.x,
+                               [01;36m[K^~~~~~~~~~~~~~~~[m[K
+                               [32m[Kcurrent_state[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::updateForceandMoment()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:190:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_wind[m[K’ was not declared in this scope
+         Vector3f _relative_velocity = _v - [01;31m[Kcurrent_wind[m[K;
+                                            [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:190:44:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kcurrent_pose[m[K’
+         Vector3f _relative_velocity = _v - [01;36m[Kcurrent_wind[m[K;
+                                            [01;36m[K^~~~~~~~~~~~[m[K
+                                            [32m[Kcurrent_pose[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

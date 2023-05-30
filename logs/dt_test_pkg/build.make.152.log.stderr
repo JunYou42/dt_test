@@ -1,0 +1,17 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:43:34:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<<[m[K’ token
+     const Matrix3f J (Matrix3f() [01;31m[K<<[m[K 1.0f, 2.0f, 3.0f,
+                                  [01;31m[K^~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:47:22:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kconst Matrix3f QuadDynamicModel::J(Eigen::Matrix3f (*)())[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+     Matrix3f J_inv = [01;31m[KJ[m[K.inverse();
+                      [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::newtonEulerMotionEquation()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:183:58:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kconst Matrix3f QuadDynamicModel::J(Eigen::Matrix3f (*)())[m[K’
+      _Omega_dot = J_inv * (_Me_computed - _Omega.cross([01;31m[KJ * _Omega[m[K)); // conservation of angular momentum
+                                                        [01;31m[K~~^~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:43:20:[m[K [01;36m[Knote: [m[Kdeclared here
+     const Matrix3f [01;36m[KJ[m[K (Matrix3f() << 1.0f, 2.0f, 3.0f,
+                    [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
