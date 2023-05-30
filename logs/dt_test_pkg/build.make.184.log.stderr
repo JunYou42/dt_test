@@ -1,0 +1,8 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::updateModelParameters()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:191:42:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::vector<mavros_msgs::ESCStatusItem_<std::allocator<void> >, std::allocator<mavros_msgs::ESCStatusItem_<std::allocator<void> > > >::size[m[K’ from type ‘[01m[Kstd::vector<mavros_msgs::ESCStatusItem_<std::allocator<void> >, std::allocator<mavros_msgs::ESCStatusItem_<std::allocator<void> > > >::size_type (std::vector<mavros_msgs::ESCStatusItem_<std::allocator<void> >, std::allocator<mavros_msgs::ESCStatusItem_<std::allocator<void> > > >::)() const noexcept[m[K’ {aka ‘[01m[Klong unsigned int (std::vector<mavros_msgs::ESCStatusItem_<std::allocator<void> >, std::allocator<mavros_msgs::ESCStatusItem_<std::allocator<void> > > >::)() const[m[K’} to type ‘[01m[Kint[m[K’
+         int buf = current_esc.esc_status.[01;31m[Ksize[m[K;
+                                          [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

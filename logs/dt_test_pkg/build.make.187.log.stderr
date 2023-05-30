@@ -1,0 +1,23 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:33:49:[m[K [01;31m[Kerror: [m[Kflexible array member ‘[01m[KQuadDynamicModel::current_esc_item[m[K’ not at end of ‘[01m[Kclass QuadDynamicModel[m[K’
+     mavros_msgs::ESCStatusItem current_esc_item[[01;31m[K][m[K;
+                                                 [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In constructor ‘[01m[KQuadDynamicModel::QuadDynamicModel()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:102:5:[m[K [01;31m[Kerror: [m[Kunknown array size in delete
+     [01;31m[K{[m[K
+     [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In destructor ‘[01m[KQuadDynamicModel::~QuadDynamicModel()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:129:5:[m[K [01;31m[Kerror: [m[Kunknown array size in delete
+     [01;31m[K{[m[K
+     [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::escCallBack(const ConstPtr&)[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:153:9:[m[K [01;31m[Kerror: [m[Kinvalid use of array with unspecified bounds
+         [01;31m[Kcurrent_esc_item[m[K = msg->esc_status;
+         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K At global scope:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:33:49:[m[K [01;31m[Kerror: [m[Kflexible array member ‘[01m[KQuadDynamicModel::current_esc_item[m[K’ not at end of ‘[01m[Kclass DigitalTwin[m[K’
+     mavros_msgs::ESCStatusItem current_esc_item[[01;31m[K][m[K;
+                                                 [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

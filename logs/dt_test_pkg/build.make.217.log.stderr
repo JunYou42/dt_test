@@ -1,0 +1,11 @@
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In member function ‘[01m[Kvoid DigitalTwin::offboardSendTargetPose()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:155:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kmod[m[K’ was not declared in this scope
+             if([01;31m[Kmod[m[K(display_count, 10) == 0){
+                [01;31m[K^~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:155:16:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+             if([01;36m[Kmod[m[K(display_count, 10) == 0){
+                [01;36m[K^~~[m[K
+                [32m[Kmodf[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

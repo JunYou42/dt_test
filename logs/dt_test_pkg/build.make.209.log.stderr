@@ -1,0 +1,25 @@
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:7[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In member function ‘[01m[Kvoid DigitalTwin::offboardSendTargetPose()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:154:67:[m[K [01;31m[Kerror: [m[K‘[01m[K_dynamic_model_quad[m[K’ was not declared in this scope
+             ROS_INFO_STREAM("[offboardSendTargetPose] get Fe." << [01;31m[K_dynamic_model_quad[m[K.getAccLinear());
+                                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:361:64:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION_WITH_FILTER[m[K’
+     __rosconsole_print_stream_at_location_with_filter__ss__ << [01;36m[Kargs[m[K; \
+                                                                [01;36m[K^~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:409:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K’
+       [01;36m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K(args); \
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:582:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM_COND[m[K’
+ #define ROS_LOG_STREAM(level, name, args) [01;36m[KROS_LOG_STREAM_COND[m[K(true, level, name, args)
+                                           [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:111:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM[m[K’
+ #define ROS_INFO_STREAM(args) [01;36m[KROS_LOG_STREAM[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, args)
+                               [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:154:13:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO_STREAM[m[K’
+             [01;36m[KROS_INFO_STREAM[m[K("[offboardSendTargetPose] get Fe." << _dynamic_model_quad.getAccLinear());
+             [01;36m[K^~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

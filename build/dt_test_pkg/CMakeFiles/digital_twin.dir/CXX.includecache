@@ -99,6 +99,8 @@ mavros_msgs/State.h
 -
 mavros_msgs/ESCStatus.h
 -
+mavros_msgs/ESCStatusItem.h
+-
 geometry_msgs/PoseStamped.h
 -
 geometry_msgs/Pose.h

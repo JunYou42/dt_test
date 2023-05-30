@@ -12,6 +12,7 @@
 #include <mavros_msgs/SetMode.h>
 #include <mavros_msgs/State.h>
 #include <mavros_msgs/ESCStatus.h>
+#include <mavros_msgs/ESCStatusItem.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <geometry_msgs/Pose.h>
 #include <geometry_msgs/Twist.h>
@@ -29,6 +30,7 @@ private:
 
     mavros_msgs::State  current_state;
     mavros_msgs::ESCStatus  current_esc;
+    mavros_msgs::ESCStatusItem current_esc_item[4];
     geometry_msgs::Pose current_pose;
     geometry_msgs::Twist current_velocity;
     Vector3f   current_wind = Vector3f(0.0f, 0.0f, 0.0f) ;;
@@ -96,6 +98,14 @@ private:
 	Vector3f _D_computed;	// aerodynamic drag in inertial frame
 
 public:
+    void spinThread()
+    {
+        while(!stop_thread)
+        {
+            ros::spinOnce();
+        }
+    }
+
     QuadDynamicModel() 
     {
         // update the ROS topics
@@ -105,21 +115,19 @@ public:
         vel_sub = nh_.subscribe("/physical_entity/local_position/velocity",10, &QuadDynamicModel::velCallBack,this);
         wind_sub = nh_.subscribe("/weather/wind",10, &QuadDynamicModel::windCallBack,this);
 
-        // update dynamic mdoelpose
-        updateModelParameters();
-        updateForceandMoment();
-        newtonEulerMotionEquation();
-        
+       
 
         // check connection
         ros::Rate rate(20.0);
         while(ros::ok() && !current_state.connected){
+             
+        
             ros::spinOnce();
             rate.sleep();
         }
 
         stop_thread = false;
-        // spin_thread = new boost::thread(&DigitalTwin::spinThread,this);
+        spin_thread = new boost::thread(&QuadDynamicModel::spinThread,this);
 
     }
 
@@ -147,7 +155,10 @@ public:
 
     }
     void escCallBack(const mavros_msgs::ESCStatus::ConstPtr& msg ){
-        current_esc= *msg;
+        current_esc = *msg;
+        for (int i=0; i<4; i++){
+            current_esc_item[i] = msg->esc_status[i];
+        }
         // ROS_INFO_STREAM("[escCallBack] Get pose data.");
 
     }
@@ -185,10 +196,10 @@ public:
         _Omega = Vector3f(_r, _p, _y); // body frame
 
         for (int i=0; i<4; i++){
-        _u[i] = current_esc.esc_status[i].rpm;
-        _omega[i] = 2 * M_PI * _u[i]/60;
+            _u[i] = current_esc_item[i].rpm;
+            _omega[i] = 2 * M_PI * _u[i]/60;
         }
-        // ROS_INFO_STREAM("[QuadModel][updateModelParameters] Get rotor 1 speed." << _omega[0] );
+        ROS_INFO_STREAM("[QuadModel][updateModelParameters] Get rotor 1 speed." << _omega[0] );
 
         // update coefficients  // _TODO_
         _C_T = 2.49e-6/( rho * M_PI * pow(R, 4)); 
@@ -220,9 +231,9 @@ public:
 
         _Me_computed = _thrust_moment + _reaction_torque;// _TODO_ missing damper
 
-        // ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _D_computed: " << _D_computed );
-        // ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Fe_computed:" << _Fe_computed );
-        // ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Me_computed:" << _Me_computed );
+        ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _D_computed: " << _D_computed );
+        ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Fe_computed:" << _Fe_computed );
+        ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Me_computed:" << _Me_computed );
 
     }
 
@@ -230,8 +241,8 @@ public:
 
 	    _v_dot = _Fe_computed/ m;   // conservation of linear momentum
 	    _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * _Omega)); // conservation of angular momentum
-        // ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _v_dot:" << _v_dot );
-        // ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _Omega_dot:" << _Omega_dot );
+        ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _v_dot:" << _v_dot );
+        ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _Omega_dot:" << _Omega_dot );
 
     }
 

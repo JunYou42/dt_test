@@ -31,9 +31,9 @@ protected:
         ("mavros/cmd/arming");
     ros::ServiceClient set_mode_client = nh_.serviceClient<mavros_msgs::SetMode>
         ("mavros/set_mode");
-            
     QuadDynamicModel _dynamic_model_quad;
-    
+            
+
 
     
 public:
@@ -64,7 +64,7 @@ public:
         }
 
         stop_thread = false;
-        // spin_thread = new boost::thread(&DigitalTwin::spinThread,this);
+        spin_thread = new boost::thread(&DigitalTwin::spinThread,this);
 
     }
 
@@ -94,8 +94,9 @@ public:
 
     void offboardSendTargetPose(){
         ROS_INFO_STREAM("[offboardSendTargetPose] Start main task.");
+        int display_count = 0;
         
-        
+
         ros::Rate rate(20.0); // setpoint frequency must be faster than 20HZ
 
         geometry_msgs::PoseStamped pose;
@@ -150,7 +151,14 @@ public:
 
             local_pos_pub.publish(pose);
 
-
+            // update dynamic mdoelpose
+            if( display_count % 10 == 0){
+                _dynamic_model_quad.updateModelParameters();
+                _dynamic_model_quad.updateForceandMoment();
+                _dynamic_model_quad.newtonEulerMotionEquation();
+            }
+            display_count++;
+            
             ros::spinOnce();
             rate.sleep();
 

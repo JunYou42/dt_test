@@ -1,0 +1,8 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In constructor ‘[01m[KQuadDynamicModel::QuadDynamicModel()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:124:42:[m[K [01;31m[Kerror: [m[K‘[01m[KDigitalTwin[m[K’ has not been declared
+         spin_thread = new boost::thread(&[01;31m[KDigitalTwin[m[K::spinThread,this);
+                                          [01;31m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

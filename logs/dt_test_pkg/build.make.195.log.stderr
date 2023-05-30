@@ -1,0 +1,8 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::updateModelParameters()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:194:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmavros_msgs::ESCStatus[m[K’ {aka ‘[01m[Kstruct mavros_msgs::ESCStatus_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kcurrent_esc_item[m[K’
+         int buf = current_esc.[01;31m[Kcurrent_esc_item[m[K[0].rpm;
+                               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
