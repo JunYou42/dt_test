@@ -25,6 +25,8 @@ ros/message_operations.h
 /home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/weather_node.cpp
 ros/ros.h
 -
+cmath
+-
 dt_test_pkg/Wind.h
 -
 iostream

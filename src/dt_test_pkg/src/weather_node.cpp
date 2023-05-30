@@ -11,6 +11,7 @@
 */
 
 #include <ros/ros.h>
+#include <cmath>
 // LOCAL
 #include <dt_test_pkg/Wind.h>
 #include <iostream>
@@ -142,13 +143,15 @@ int main(int argc, char **argv)
             float wind_speed = decimalValue;
             wind_speed = wind_speed/36;
             int wind_direction = decimalValue_direction*360/255;
+            float wind_direction_rad = wind_direction*M_PI/180;
 
-            current_wind.wind_x = 0;
-            current_wind.wind_y = decimalValue_direction;
+            current_wind.wind_x = wind_speed * std::sin(wind_direction_rad);
+            current_wind.wind_y = wind_speed * std::cos(wind_direction_rad);
             current_wind.wind_z = 0;
+            // ROS_INFO_STREAM("\n WIND SPEED original: "<< hexValues << " | WIND DIRECTION: original " << hexValues_direction);
+
             ROS_INFO_STREAM("\nWIND SPEED: "<< wind_speed << " | WIND DIRECTION: " << wind_direction);
-            ROS_INFO_STREAM("\n WIND SPEED original: "<< hexValues << " | WIND DIRECTION: original " << hexValues_direction);
-            // ROS_INFO_STREAM("\n original: "<< data);
+            ROS_INFO_STREAM("\nWIND VECTOR: \n"<< current_wind);
 
             wind_pub.publish(current_wind);
         }
