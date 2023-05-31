@@ -114,7 +114,7 @@ public:
         esc_sub = nh_.subscribe<mavros_msgs::ESCStatus>("mavros/esc_status", 10, &QuadDynamicModel::escCallBack, this);
         pose_sub = nh_.subscribe("/physical_entity/local_position/pose",10, &QuadDynamicModel::poseCallBack,this);
         vel_sub = nh_.subscribe("/physical_entity/local_position/velocity",10, &QuadDynamicModel::velCallBack,this);
-        wind_sub = nh_.subscribe("/weather/wind",10, &QuadDynamicModel::windCallBack,this);
+        wind_sub = nh_.subscribe("/environment/wind",10, &QuadDynamicModel::windCallBack,this);
 
        
 
@@ -190,7 +190,7 @@ public:
 
         _v = Vector3f(current_velocity.linear.x,
             current_velocity.linear.y,
-            current_velocity.linear.z); // inertial frame ??
+            current_velocity.linear.z); // inertial frame _TODO_ check: OK 
 
         _r = current_velocity.angular.x;
         _p = current_velocity.angular.y;
@@ -202,7 +202,7 @@ public:
             _omega[i] = 2 * M_PI * _u[i]/60;
         }
 
-        // update coefficients  // _TODO_
+        // update coefficients  // _TODO_ check
         _C_T = 2.49e-6/( rho * M_PI * pow(R, 4)); 
         _C_Q = 4.62e-8/( rho * M_PI * pow(R, 5));
         _C_D = 0.0285; // D= - _C_D * v_rel^2
@@ -254,14 +254,14 @@ public:
         //                                             <<  _omega[3] << "\n"
         //                                              );
 
-        // ROS_INFO_STREAM("[INFO] Get VELOCITY:\n" << _v);
-        // ROS_INFO_STREAM("[INFO] Get OMEGA:\n" << _Omega);
-        // ROS_INFO_STREAM("[INFO] Get OMEGA:\n" << _Omega);
-        ROS_INFO_STREAM("[INFO] Get THRUST.\n" <<    _T[0] << "\n"
-                                                    <<  _T[1] << "\n"
-                                                    <<  _T[2] << "\n"
-                                                    <<  _T[3] << "\n"
-                                                     );
+        ROS_INFO_STREAM("[INFO] Get VELOCITY:\n" << _v);
+        ROS_INFO_STREAM("[INFO] Get OMEGA:\n" << _Omega);
+        ROS_INFO_STREAM("[INFO] Get OMEGA:\n" << _Omega);
+        // ROS_INFO_STREAM("[INFO] Get THRUST.\n" <<    _T[0] << "\n"
+        //                                             <<  _T[1] << "\n"
+        //                                             <<  _T[2] << "\n"
+        //                                             <<  _T[3] << "\n"
+        //                                              );
     }    
 
 	Eigen::Vector3f getFe() const { return _Fe_computed; }

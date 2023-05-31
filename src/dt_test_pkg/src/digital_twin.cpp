@@ -24,8 +24,8 @@ protected:
 
     ros::Publisher local_pos_pub = nh_.advertise<geometry_msgs::PoseStamped>
         ("mavros/setpoint_position/local", 10);
-    ros::Publisher real_pos_pub = nh_.advertise<geometry_msgs::PoseStamped>
-        ("/mavros/local_position/pose", 10);
+    // ros::Publisher real_pos_pub = nh_.advertise<geometry_msgs::PoseStamped>
+    //     ("/mavros/local_position/pose", 10);
 
     ros::ServiceClient arming_client = nh_.serviceClient<mavros_msgs::CommandBool>
         ("mavros/cmd/arming");
@@ -54,7 +54,7 @@ public:
         // update the info of environmental and digital model
         state_sub = nh_.subscribe<mavros_msgs::State>("mavros/state", 10, &DigitalTwin::stateCallBack, this);
         pose_sub = nh_.subscribe("/physical_entity/local_position/pose",10, &DigitalTwin::poseCallBack,this);
-        wind_sub = nh_.subscribe("/weather/wind",10, &DigitalTwin::windCallBack,this);
+        wind_sub = nh_.subscribe("/environment/wind",10, &DigitalTwin::windCallBack,this);
 
         // check connection
         ros::Rate rate(20.0);
@@ -101,11 +101,11 @@ public:
 
         geometry_msgs::PoseStamped pose;
         pose.pose.position.x = 0;
-        pose.pose.position.y = 10;
+        pose.pose.position.y = 6;
         pose.pose.position.z = 1;
-        pose.pose.orientation.x = 1;
+        pose.pose.orientation.x = 0;
         pose.pose.orientation.y = 0;
-        pose.pose.orientation.z = 0;
+        pose.pose.orientation.z = 1;
         pose.pose.orientation.w = M_PI/2;
 
         //send a few setpoints before starting
@@ -152,7 +152,9 @@ public:
             // }
             //OPTION 2 update controller parameter based on wind, current pose
 
-
+            if(current_pose.position.y > 6){
+                pose.pose.position.x=5;
+            }
             local_pos_pub.publish(pose);
 
             // update dynamic mdoelpose

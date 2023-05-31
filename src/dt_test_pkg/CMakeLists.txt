@@ -162,10 +162,10 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
-add_executable(weather
-  src/weather_node.cpp
+add_executable(environment
+  src/env_node.cpp
 )
-target_link_libraries(weather
+target_link_libraries(environment
   ${catkin_LIBRARIES}
 )
 add_executable(digital_twin
