@@ -101,8 +101,12 @@ public:
 
         geometry_msgs::PoseStamped pose;
         pose.pose.position.x = 0;
-        pose.pose.position.y = 0;
+        pose.pose.position.y = 10;
         pose.pose.position.z = 1;
+        pose.pose.orientation.x = 1;
+        pose.pose.orientation.y = 0;
+        pose.pose.orientation.z = 0;
+        pose.pose.orientation.w = M_PI/2;
 
         //send a few setpoints before starting
         for(int i = 100; ros::ok() && i > 0; --i){
@@ -152,10 +156,14 @@ public:
             local_pos_pub.publish(pose);
 
             // update dynamic mdoelpose
-            if( display_count % 10 == 0){
+            if( display_count % 30 == 0){
                 _dynamic_model_quad.updateModelParameters();
                 _dynamic_model_quad.updateForceandMoment();
                 _dynamic_model_quad.newtonEulerMotionEquation();
+                _dynamic_model_quad.printInfo();
+                
+                
+              
             }
             display_count++;
             
@@ -224,7 +232,7 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "twin_node");
 
     DigitalTwin digital_drone;
-    ROS_INFO_STREAM("[MAIN] Object of DigitalTwin is built. The digital twin of drone starts updating data.");
+    ROS_INFO_STREAM("[MAIN] Object of DigitalTwin i[MAIN] Object of DigitalTwin is built. The digital twin of drone starts updating data."); 
 
     digital_drone.offboardSendTargetPose();
   

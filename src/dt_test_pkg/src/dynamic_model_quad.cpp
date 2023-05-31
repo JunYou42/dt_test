@@ -1,5 +1,5 @@
 
-#include<iostream>
+#include <iostream>
 #include <Eigen/Eigen>
 #include <Eigen/Core>
 #include <Eigen/Geometry>
@@ -33,7 +33,7 @@ private:
     mavros_msgs::ESCStatusItem current_esc_item[4];
     geometry_msgs::Pose current_pose;
     geometry_msgs::Twist current_velocity;
-    Vector3f   current_wind = Vector3f(0.0f, 0.0f, 0.0f) ;;
+    Vector3f   current_wind = Vector3f(0.0f, 0.0f, 0.0f) ;
 
     ros::Subscriber pose_sub;
     ros::Subscriber vel_sub;
@@ -47,8 +47,8 @@ private:
     const float R = 0.13/2;  // radius of rotor 
     const float l = 0.14;  // arm length
     static constexpr int NB = 3; // number of blade
-    const float g = 9.81; // gravaty acceleration [kg/m^3]
-    const float rho = 1.225f; // air density 
+    const float g = 9.81; // gravaty acceleration [m/s^2]
+    const float rho = 1.225f; // air density [kg/m^3]
     Matrix3f J = Matrix3f::Identity();// inertia matrix
     Matrix3f J_inv;
 	    //_Im1 = 100.0f * inv(static_cast<typeof _I>(100.0f * _I));
@@ -63,10 +63,11 @@ private:
 
 
     //time varying model parameter:
-	Matrix3f _R_IB;          // body to inertial transformation
+	Matrix3f _R_ICB;          // paper body to inertial frame transformation
+	Matrix3f _R_IRB;          // mavros body to inertial frame transformation
     
 	Vector3f _v = Vector3f(0.0f, 0.0f, 0.0f); // velocity in inertial frame
-    Quaternionf _quat; //Quaternionf _quat(1, 0, 0, 0);
+    Quaternionf _quat; 
     float _p = 0.0f, _y = 0.0f, _r = 0.0f;
 	Vector3f _Omega;// angular velocity in body frame 
 	
@@ -182,9 +183,10 @@ public:
         _quat.y()  =  current_pose.orientation.y;
         _quat.z()  = current_pose.orientation.z;
         _quat.w()  = current_pose.orientation.w;
-        Matrix3f _R_IB = _quat.toRotationMatrix();
+        _R_IRB = _quat.toRotationMatrix();
         AngleAxisf _rotation(M_PI/4, Vector3f::UnitZ());
-        Matrix3f _R_MB_CB = _rotation.toRotationMatrix();
+        Matrix3f _R_RB_CB = _rotation.toRotationMatrix();
+        _R_ICB = _R_IRB * _R_RB_CB;
 
         _v = Vector3f(current_velocity.linear.x,
             current_velocity.linear.y,
@@ -199,7 +201,6 @@ public:
             _u[i] = current_esc_item[i].rpm;
             _omega[i] = 2 * M_PI * _u[i]/60;
         }
-        ROS_INFO_STREAM("[QuadModel][updateModelParameters] Get rotor 1 speed." << _omega[0] );
 
         // update coefficients  // _TODO_
         _C_T = 2.49e-6/( rho * M_PI * pow(R, 4)); 
@@ -218,7 +219,7 @@ public:
             _T[i] = _C_T * rho * M_PI * pow(R, 4) * pow(_omega[i],2);
         }
         _sum_thrust = _T[0] * _d[0] + _T[1] * _d[1] + _T[2] * _d[2] + _T[3] * _d[3];
-        _Fe_computed = G + _D_computed + _R_IB * _sum_thrust;
+        _Fe_computed = G + _D_computed + _R_ICB * _sum_thrust;
 
         // resultant Torque -- body frame
         Vector3f _thrust_moment = Vector3f(0.0f, 0.0f, 0.0f) ;
@@ -231,9 +232,9 @@ public:
 
         _Me_computed = _thrust_moment + _reaction_torque;// _TODO_ missing damper
 
-        ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _D_computed: " << _D_computed );
-        ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Fe_computed:" << _Fe_computed );
-        ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Me_computed:" << _Me_computed );
+        ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _D_computed: \n" << _D_computed );
+        ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Fe_computed:\n" << _Fe_computed );
+        ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Me_computed:\n" << _Me_computed );
 
     }
 
@@ -241,10 +242,27 @@ public:
 
 	    _v_dot = _Fe_computed/ m;   // conservation of linear momentum
 	    _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * _Omega)); // conservation of angular momentum
-        ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _v_dot:" << _v_dot );
-        ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _Omega_dot:" << _Omega_dot );
+        ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _v_dot:\n" << _v_dot );
+        ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _Omega_dot:\n" << _Omega_dot );
 
     }
+
+    void printInfo(){
+        // ROS_INFO_STREAM("[INFO] Get rotor speed.\n" << _omega[0] << "\n"
+        //                                             <<  _omega[1] << "\n"
+        //                                             <<  _omega[2] << "\n"
+        //                                             <<  _omega[3] << "\n"
+        //                                              );
+
+        // ROS_INFO_STREAM("[INFO] Get VELOCITY:\n" << _v);
+        // ROS_INFO_STREAM("[INFO] Get OMEGA:\n" << _Omega);
+        // ROS_INFO_STREAM("[INFO] Get OMEGA:\n" << _Omega);
+        ROS_INFO_STREAM("[INFO] Get THRUST.\n" <<    _T[0] << "\n"
+                                                    <<  _T[1] << "\n"
+                                                    <<  _T[2] << "\n"
+                                                    <<  _T[3] << "\n"
+                                                     );
+    }    
 
 	Eigen::Vector3f getFe() const { return _Fe_computed; }
 	Eigen::Vector3f getMe() const { return _Me_computed; }

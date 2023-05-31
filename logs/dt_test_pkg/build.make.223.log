@@ -1,0 +1,81 @@
+[ 10%] Built target physical_entity
+[ 10%] Built target std_msgs_generate_messages_py
+[ 10%] Built target geometry_msgs_generate_messages_py
+[ 10%] Built target std_msgs_generate_messages_nodejs
+[ 10%] Built target sensor_msgs_generate_messages_py
+[ 10%] Built target sensor_msgs_generate_messages_nodejs
+[ 10%] Built target std_msgs_generate_messages_eus
+[ 10%] Built target geometry_msgs_generate_messages_eus
+[ 10%] Built target geometry_msgs_generate_messages_nodejs
+[ 10%] Built target std_msgs_generate_messages_cpp
+[ 10%] Built target sensor_msgs_generate_messages_eus
+[ 10%] Built target geometry_msgs_generate_messages_cpp
+[ 10%] Built target geometry_msgs_generate_messages_lisp
+[ 10%] Built target sensor_msgs_generate_messages_cpp
+[ 10%] Built target std_msgs_generate_messages_lisp
+[ 10%] Built target sensor_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target digital_twin[0m
+[ 15%] [32mBuilding CXX object CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o[0m
+[ 26%] Built target weather
+[ 26%] Built target _dt_test_pkg_generate_messages_check_deps_ControlEval
+[ 26%] Built target _dt_test_pkg_generate_messages_check_deps_Wind
+[ 63%] Built target dt_test_pkg_generate_messages_eus
+[ 68%] Built target dt_test_pkg_generate_messages_py
+[ 73%] Built target dt_test_pkg_generate_messages_nodejs
+[ 84%] Built target dt_test_pkg_generate_messages_lisp
+[ 94%] Built target dt_test_pkg_generate_messages_cpp
+[ 94%] Built target dt_test_pkg_generate_messages
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:7[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In member function ‘[01m[Kvoid DigitalTwin::offboardSendTargetPose()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:161:81:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen::Vector3f QuadDynamicModel::_v[m[K’ is private within this context
+                 ROS_INFO_STREAM("[MAIN] Get VELOCITY:\n" << _dynamic_model_quad.[01;31m[K_v[m[K);
+                                                                                 [01;31m[K^~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:361:64:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION_WITH_FILTER[m[K’
+     __rosconsole_print_stream_at_location_with_filter__ss__ << [01;36m[Kargs[m[K; \
+                                                                [01;36m[K^~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:409:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K’
+       [01;36m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K(args); \
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:582:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM_COND[m[K’
+ #define ROS_LOG_STREAM(level, name, args) [01;36m[KROS_LOG_STREAM_COND[m[K(true, level, name, args)
+                                           [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:111:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM[m[K’
+ #define ROS_INFO_STREAM(args) [01;36m[KROS_LOG_STREAM[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, args)
+                               [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:161:17:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO_STREAM[m[K’
+                 [01;36m[KROS_INFO_STREAM[m[K("[MAIN] Get VELOCITY:\n" << _dynamic_model_quad._v);
+                 [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:69:41:[m[K [01;36m[Knote: [m[Kdeclared private here
+  Vector3f _v = Vector3f(0.0f, 0.0f, 0.0f[01;36m[K)[m[K; // velocity in inertial frame
+                                         [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:40[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:7[m[K,
+                 from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:162:78:[m[K [01;31m[Kerror: [m[K‘[01m[KEigen::Vector3f QuadDynamicModel::_Omega[m[K’ is private within this context
+                 ROS_INFO_STREAM("[MAIN] Get OMEGA:\n" << _dynamic_model_quad.[01;31m[K_Omega[m[K);
+                                                                              [01;31m[K^~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:361:64:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION_WITH_FILTER[m[K’
+     __rosconsole_print_stream_at_location_with_filter__ss__ << [01;36m[Kargs[m[K; \
+                                                                [01;36m[K^~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:409:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K’
+       [01;36m[KROSCONSOLE_PRINT_STREAM_AT_LOCATION[m[K(args); \
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/console.h:582:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM_COND[m[K’
+ #define ROS_LOG_STREAM(level, name, args) [01;36m[KROS_LOG_STREAM_COND[m[K(true, level, name, args)
+                                           [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/rosconsole/macros_generated.h:111:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_STREAM[m[K’
+ #define ROS_INFO_STREAM(args) [01;36m[KROS_LOG_STREAM[m[K(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, args)
+                               [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:162:17:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO_STREAM[m[K’
+                 [01;36m[KROS_INFO_STREAM[m[K("[MAIN] Get OMEGA:\n" << _dynamic_model_quad._Omega);
+                 [01;36m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:72:11:[m[K [01;36m[Knote: [m[Kdeclared private here
+  Vector3f [01;36m[K_Omega[m[K;// angular velocity in body frame
+           [01;36m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1121: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
