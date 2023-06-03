@@ -16,6 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   std_srvs
   serial
+  # mavsdk?
 )
 find_package(Eigen3 REQUIRED)
 
@@ -116,7 +117,7 @@ generate_messages(
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES dt_test_pkg
-  CATKIN_DEPENDS geometry_msgs mavros roscpp rospy sensor_msgs std_msgs std_srvs
+  CATKIN_DEPENDS geometry_msgs mavros roscpp rospy sensor_msgs std_msgs std_srvs 
   DEPENDS system_lib
 )
 

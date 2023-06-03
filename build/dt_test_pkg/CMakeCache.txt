@@ -503,6 +503,9 @@ mavros_DIR:PATH=/opt/ros/noetic/share/mavros/cmake
 //The directory containing a CMake configuration file for mavros_msgs.
 mavros_msgs_DIR:PATH=/opt/ros/noetic/share/mavros_msgs/cmake
 
+//The directory containing a CMake configuration file for mavsdk.
+mavsdk_DIR:PATH=mavsdk_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/noetic/share/message_filters/cmake
 
