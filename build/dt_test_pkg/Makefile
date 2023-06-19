@@ -233,6 +233,19 @@ dt_test_pkg_generate_messages_eus/fast:
 .PHONY : dt_test_pkg_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named test_matrix
+
+# Build rule for target.
+test_matrix: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_matrix
+.PHONY : test_matrix
+
+# fast build rule for target.
+test_matrix/fast:
+	$(MAKE) -f CMakeFiles/test_matrix.dir/build.make CMakeFiles/test_matrix.dir/build
+.PHONY : test_matrix/fast
+
+#=============================================================================
 # Target rules for targets named dt_test_pkg_generate_messages_cpp
 
 # Build rule for target.
@@ -1548,6 +1561,33 @@ src/physical_entity.cpp.s:
 	$(MAKE) -f CMakeFiles/physical_entity.dir/build.make CMakeFiles/physical_entity.dir/src/physical_entity.cpp.s
 .PHONY : src/physical_entity.cpp.s
 
+src/test_matrix.o: src/test_matrix.cpp.o
+
+.PHONY : src/test_matrix.o
+
+# target to build an object file
+src/test_matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/test_matrix.dir/build.make CMakeFiles/test_matrix.dir/src/test_matrix.cpp.o
+.PHONY : src/test_matrix.cpp.o
+
+src/test_matrix.i: src/test_matrix.cpp.i
+
+.PHONY : src/test_matrix.i
+
+# target to preprocess a source file
+src/test_matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/test_matrix.dir/build.make CMakeFiles/test_matrix.dir/src/test_matrix.cpp.i
+.PHONY : src/test_matrix.cpp.i
+
+src/test_matrix.s: src/test_matrix.cpp.s
+
+.PHONY : src/test_matrix.s
+
+# target to generate assembly for a file
+src/test_matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/test_matrix.dir/build.make CMakeFiles/test_matrix.dir/src/test_matrix.cpp.s
+.PHONY : src/test_matrix.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1563,6 +1603,7 @@ help:
 	@echo "... dt_test_pkg_geneus"
 	@echo "... rebuild_cache"
 	@echo "... dt_test_pkg_generate_messages_eus"
+	@echo "... test_matrix"
 	@echo "... dt_test_pkg_generate_messages_cpp"
 	@echo "... _dt_test_pkg_generate_messages_check_deps_ControlEval"
 	@echo "... std_srvs_generate_messages_nodejs"
@@ -1670,6 +1711,9 @@ help:
 	@echo "... src/physical_entity.o"
 	@echo "... src/physical_entity.i"
 	@echo "... src/physical_entity.s"
+	@echo "... src/test_matrix.o"
+	@echo "... src/test_matrix.i"
+	@echo "... src/test_matrix.s"
 .PHONY : help
 
 

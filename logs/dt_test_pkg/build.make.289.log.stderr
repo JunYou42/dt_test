@@ -1,0 +1,12 @@
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::updateForceandMoment()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:237:24:[m[K [01;31m[Kerror: [m[K‘[01m[K_R_RB_CB[m[K’ was not declared in this scope
+         _Me_computed = [01;31m[K_R_RB_CB[m[K * (_thrust_moment + _reaction_torque);// _TODO_ missing damper
+                        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:237:24:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_R_ICB[m[K’
+         _Me_computed = [01;36m[K_R_RB_CB[m[K * (_thrust_moment + _reaction_torque);// _TODO_ missing damper
+                        [01;36m[K^~~~~~~~[m[K
+                        [32m[K_R_ICB[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1177: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

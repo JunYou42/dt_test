@@ -1,0 +1,40 @@
+[  9%] Built target environment
+[ 19%] Built target test_matrix
+[ 28%] Built target physical_entity
+[ 28%] Built target std_msgs_generate_messages_py
+[ 28%] Built target geometry_msgs_generate_messages_py
+[ 28%] Built target sensor_msgs_generate_messages_py
+[ 28%] Built target _dt_test_pkg_generate_messages_check_deps_Wind
+[ 28%] Built target std_msgs_generate_messages_nodejs
+[ 28%] Built target _dt_test_pkg_generate_messages_check_deps_ControlEval
+[ 28%] Built target geometry_msgs_generate_messages_nodejs
+[ 28%] Built target sensor_msgs_generate_messages_nodejs
+[ 28%] Built target std_msgs_generate_messages_eus
+[ 28%] Built target geometry_msgs_generate_messages_eus
+[ 28%] Built target std_msgs_generate_messages_cpp
+[ 28%] Built target sensor_msgs_generate_messages_eus
+[ 28%] Built target geometry_msgs_generate_messages_cpp
+[ 28%] Built target sensor_msgs_generate_messages_cpp
+[ 28%] Built target geometry_msgs_generate_messages_lisp
+[ 28%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target digital_twin[0m
+[ 47%] Built target dt_test_pkg_generate_messages_py
+[ 47%] Built target sensor_msgs_generate_messages_lisp
+[ 57%] Built target dt_test_pkg_generate_messages_nodejs
+[ 61%] [32mBuilding CXX object CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o[0m
+[ 71%] Built target dt_test_pkg_generate_messages_lisp
+[ 85%] Built target dt_test_pkg_generate_messages_eus
+[ 95%] Built target dt_test_pkg_generate_messages_cpp
+[ 95%] Built target dt_test_pkg_generate_messages
+In file included from [01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:3[m[K:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:[m[K In member function ‘[01m[Kvoid QuadDynamicModel::updateForceandMoment()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:237:24:[m[K [01;31m[Kerror: [m[K‘[01m[K_R_RB_CB[m[K’ was not declared in this scope
+         _Me_computed = [01;31m[K_R_RB_CB[m[K * (_thrust_moment + _reaction_torque);// _TODO_ missing damper
+                        [01;31m[K^~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/dynamic_model_quad.cpp:237:24:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_R_ICB[m[K’
+         _Me_computed = [01;36m[K_R_RB_CB[m[K * (_thrust_moment + _reaction_torque);// _TODO_ missing damper
+                        [01;36m[K^~~~~~~~[m[K
+                        [32m[K_R_ICB[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1177: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -55,17 +55,17 @@ private:
 	Vector3f G = Vector3f(0.0f, 0.0f, - m * g); // gravity applied on quadrotor
     
     Vector3f r[4]= {
-        Vector3f(l, 0, 0),
+        Vector3f(0, -l, 0),
         Vector3f(0, l, 0),
-        Vector3f(-l, 0, 0),
-        Vector3f(0, -l, 0)
+        Vector3f(l, 0, 0),
+        Vector3f(-l, 0, 0)
     }; // 
 
 
     //time varying model parameter:
 	Matrix3f _R_ICB;          // paper body to inertial frame transformation
 	Matrix3f _R_IRB;          // mavros body to inertial frame transformation
-    
+    Matrix3f _R_RB_CB ;
 	Vector3f _v = Vector3f(0.0f, 0.0f, 0.0f); // velocity in inertial frame
     Quaternionf _quat; 
     float _p = 0.0f, _y = 0.0f, _r = 0.0f;
@@ -113,6 +113,8 @@ public:
         state_sub = nh_.subscribe<mavros_msgs::State>("mavros/state", 10, &QuadDynamicModel::stateCallBack, this);
         esc_sub = nh_.subscribe<mavros_msgs::ESCStatus>("mavros/esc_status", 10, &QuadDynamicModel::escCallBack, this);
         pose_sub = nh_.subscribe("/physical_entity/local_position/pose",10, &QuadDynamicModel::poseCallBack,this);
+        // pose_sub = nh_.subscribe<geometry_msgs::PoseStamped>("mavros/local_position/pose",1, &QuadDynamicModel::poseCallBack,this);
+       
         vel_sub = nh_.subscribe("/physical_entity/local_position/velocity",10, &QuadDynamicModel::velCallBack,this);
         wind_sub = nh_.subscribe("/environment/wind",10, &QuadDynamicModel::windCallBack,this);
 
@@ -146,13 +148,13 @@ public:
 
     void poseCallBack(const geometry_msgs::Pose::ConstPtr& msg ){
         current_pose = *msg;
-        // ROS_INFO_STREAM("[QuadModel][poseCallBack] Get pose data.");
+        // ROS_INFO_STREAM("[QuadModel][poseCallBack] Get pose data." << current_pose);
 
     }
 
     void velCallBack(const geometry_msgs::Twist::ConstPtr& msg ){
         current_velocity = *msg;
-        // ROS_INFO_STREAM("[velCallBack] Get pose data.");
+        // ROS_INFO_STREAM("[velCallBack] Get current_velocity data.");
 
     }
     void escCallBack(const mavros_msgs::ESCStatus::ConstPtr& msg ){
@@ -160,7 +162,7 @@ public:
         for (int i=0; i<4; i++){
             current_esc_item[i] = msg->esc_status[i];
         }
-        // ROS_INFO_STREAM("[escCallBack] Get pose data.");
+        // ROS_INFO_STREAM("[escCallBack] Get current_esc_item data.");
 
     }
 
@@ -183,9 +185,10 @@ public:
         _quat.y()  =  current_pose.orientation.y;
         _quat.z()  = current_pose.orientation.z;
         _quat.w()  = current_pose.orientation.w;
-        _R_IRB = _quat.toRotationMatrix();
+        _R_IRB= _quat.toRotationMatrix();
+        
         AngleAxisf _rotation(M_PI/4, Vector3f::UnitZ());
-        Matrix3f _R_RB_CB = _rotation.toRotationMatrix();
+        _R_RB_CB = _rotation.toRotationMatrix();
         _R_ICB = _R_IRB * _R_RB_CB;
 
         _v = Vector3f(current_velocity.linear.x,
@@ -203,7 +206,7 @@ public:
         }
 
         // update coefficients  // _TODO_ check
-        _C_T = 2.49e-6/( rho * M_PI * pow(R, 4)); 
+        _C_T = 1.2e-5/( rho * M_PI * pow(R, 4)); 
         _C_Q = 4.62e-8/( rho * M_PI * pow(R, 5));
         _C_D = 0.0285; // D= - _C_D * v_rel^2
     }
@@ -212,6 +215,7 @@ public:
         // Drag
         Vector3f _relative_velocity = _v - current_wind;
         _D_computed = - _C_D * _relative_velocity.norm() * _relative_velocity;
+        // _D_computed = Vector3f(0.0f, 0.0f, 0.0f) ;
 
         // resultant Thrust -- inertial frame
         Vector3f _sum_thrust;
@@ -227,22 +231,27 @@ public:
         for (int i=0; i<4; i++){
             _Q[i] = _C_Q * rho * M_PI * pow(R, 5) * pow(_omega[i],2);
             _thrust_moment = _thrust_moment + r[i].cross(_T[i] * _d[i]);
-            _reaction_torque = _reaction_torque + pow((-1), (i+1)) * _Q[i] * _d[i]; // _TODO_ notice direction
         }
+        _reaction_torque = _reaction_torque -_Q[0] * _d[0] - _Q[1] * _d[1] + _Q[2] * _d[2]+ _Q[3] * _d[3]; // _TODO_ notice direction
 
-        _Me_computed = _thrust_moment + _reaction_torque;// _TODO_ missing damper
+        _Me_computed = _R_RB_CB * (_thrust_moment + _reaction_torque);// _TODO_ missing damper
 
-        ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _D_computed: \n" << _D_computed );
+        // ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _D_computed: \n" << _D_computed );
         ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Fe_computed:\n" << _Fe_computed );
+        // ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get pre _thrust_moment:\n" << _thrust_moment );
+        // ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get post _thrust_moment:\n" << _R_RB_CB * _thrust_moment );
+        // ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _reaction_torque:\n" << _reaction_torque );
         ROS_INFO_STREAM("[QuadModel][updateForceandMoment] Get _Me_computed:\n" << _Me_computed );
+
 
     }
 
     void newtonEulerMotionEquation(){
 
 	    _v_dot = _Fe_computed/ m;   // conservation of linear momentum
-	    _Omega_dot = J_inv * (_Me_computed - _Omega.cross(J * _Omega)); // conservation of angular momentum
-        ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _v_dot:\n" << _v_dot );
+        Vector3f _Omega_CB = _R_RB_CB.inverse() * _Omega;
+	    _Omega_dot =  _R_RB_CB * J_inv * (_R_RB_CB.inverse()  * _Me_computed - _Omega_CB.cross(J * _Omega_CB)); // conservation of angular momentum
+        // ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _v_dot:\n" << _v_dot );
         ROS_INFO_STREAM("[QuadModel][newtonEulerMotionEquation] Get _Omega_dot:\n" << _Omega_dot );
 
     }
@@ -254,9 +263,12 @@ public:
         //                                             <<  _omega[3] << "\n"
         //                                              );
 
-        ROS_INFO_STREAM("[INFO] Get VELOCITY:\n" << _v);
-        ROS_INFO_STREAM("[INFO] Get OMEGA:\n" << _Omega);
-        ROS_INFO_STREAM("[INFO] Get OMEGA:\n" << _Omega);
+        // ROS_INFO_STREAM("[INFO] Get _d.\n" << _R_ICB *_d[0] << "\n");
+        // ROS_INFO_STREAM("[INFO] Get _R_ICB.\n" << _R_ICB  << "\n");
+
+        // ROS_INFO_STREAM("[INFO] Get VELOCITY:\n" << _v);
+        // ROS_INFO_STREAM("[INFO] Get OMEGA:\n" << _Omega);
+        // ROS_INFO_STREAM("[INFO] Get OMEGA:\n" << _Omega);
         // ROS_INFO_STREAM("[INFO] Get THRUST.\n" <<    _T[0] << "\n"
         //                                             <<  _T[1] << "\n"
         //                                             <<  _T[2] << "\n"

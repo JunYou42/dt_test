@@ -1,0 +1,18 @@
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:[m[K In member function ‘[01m[Kvoid DigitalTwin::offboardSendTargetPose()[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:157:22:[m[K [01;31m[Kerror: [m[K‘[01m[KDuartion[m[K’ is not a member of ‘[01m[Kros[m[K’
+                 ros::[01;31m[KDuartion[m[K(10).sleep();
+                      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:157:22:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KDuration[m[K’
+                 ros::[01;36m[KDuartion[m[K(10).sleep();
+                      [01;36m[K^~~~~~~~[m[K
+                      [32m[KDuration[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:162:22:[m[K [01;31m[Kerror: [m[K‘[01m[KDuartion[m[K’ is not a member of ‘[01m[Kros[m[K’
+                 ros::[01;31m[KDuartion[m[K(10).sleep();
+                      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/digital_twin.cpp:162:22:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KDuration[m[K’
+                 ros::[01;36m[KDuartion[m[K(10).sleep();
+                      [01;36m[K^~~~~~~~[m[K
+                      [32m[KDuration[m[K
+make[2]: *** [CMakeFiles/digital_twin.dir/build.make:63: CMakeFiles/digital_twin.dir/src/digital_twin.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:1148: CMakeFiles/digital_twin.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

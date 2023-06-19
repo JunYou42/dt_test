@@ -1,0 +1,16 @@
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/physical_entity.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/physical_entity.cpp:64:36:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+         current_pose.orientation.x([01;31m[K)[m[K = mocap_pose_data.pose.orientation.x;
+                                    [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/physical_entity.cpp:65:36:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+         current_pose.orientation.y([01;31m[K)[m[K  =  mocap_pose_data.pose.orientation.y;
+                                    [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/physical_entity.cpp:66:36:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+         current_pose.orientation.z([01;31m[K)[m[K  = mocap_pose_data.pose.orientation.z;
+                                    [01;31m[K^[m[K
+[01m[K/home/roku/workspace_jun/dt_test/src/dt_test_pkg/src/physical_entity.cpp:67:35:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+        current_pose.orientation.w([01;31m[K)[m[K  = mocap_pose_data.pose.orientation.w;
+                                   [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/physical_entity.dir/build.make:63: CMakeFiles/physical_entity.dir/src/physical_entity.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:235: CMakeFiles/physical_entity.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

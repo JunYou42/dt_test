@@ -2,7 +2,7 @@
 
 
   <!-- <node pkg="dt_test_pkg" type="environment" name="environment_launch" required="true" output="screen" launch-prefix = "xterm -e"/> -->
-  <node pkg="dt_test_pkg" type="digital_twin" name="digital_twin_launch" required="true" output="screen" launch-prefix = "xterm -e"/>
+  <node pkg="dt_test_pkg" type="digital_twin" name="digital_twin_launch" required="true" output="screen"  />
   <node pkg="dt_test_pkg" type="physical_entity" name="physical_entity_launch" required="true" output="screen" />
  
   <node pkg="dt_test_pkg" type="control_eval.py" name="service_launch" required="true" output="screen" />

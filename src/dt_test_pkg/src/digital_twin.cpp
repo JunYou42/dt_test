@@ -100,13 +100,13 @@ public:
         ros::Rate rate(20.0); // setpoint frequency must be faster than 20HZ
 
         geometry_msgs::PoseStamped pose;
-        pose.pose.position.x = 0;
-        pose.pose.position.y = 6;
+        pose.pose.position.x = 6;
+        pose.pose.position.y = 0;
         pose.pose.position.z = 1;
         pose.pose.orientation.x = 0;
         pose.pose.orientation.y = 0;
-        pose.pose.orientation.z = 1;
-        pose.pose.orientation.w = M_PI/2;
+        pose.pose.orientation.z = 0;
+        pose.pose.orientation.w = 1;
 
         //send a few setpoints before starting
         for(int i = 100; ros::ok() && i > 0; --i){
@@ -151,10 +151,17 @@ public:
 
             // }
             //OPTION 2 update controller parameter based on wind, current pose
+            
 
-            if(current_pose.position.y > 6){
-                pose.pose.position.x=5;
+            if(current_pose.position.x > 6){
+
+                pose.pose.position.x=-6;
             }
+            else if(current_pose.position.x<-6){
+
+                pose.pose.position.y=6;
+            }
+           
             local_pos_pub.publish(pose);
 
             // update dynamic mdoelpose

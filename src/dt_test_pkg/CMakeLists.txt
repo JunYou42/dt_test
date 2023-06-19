@@ -16,7 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   std_srvs
   serial
-  # mavsdk?
+  # mavsdk
 )
 find_package(Eigen3 REQUIRED)
 
@@ -179,6 +179,13 @@ add_executable(physical_entity
   src/physical_entity.cpp
 )
 target_link_libraries(physical_entity
+  ${catkin_LIBRARIES}
+)
+
+add_executable(test_matrix
+  src/test_matrix.cpp
+)
+target_link_libraries(test_matrix
   ${catkin_LIBRARIES}
 )
 

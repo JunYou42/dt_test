@@ -61,6 +61,10 @@ int main(int argc, char **argv)
         current_pose.position.x = mocap_pose_data.pose.position.x;
         current_pose.position.y = mocap_pose_data.pose.position.y;
         current_pose.position.z = mocap_pose_data.pose.position.z;
+        current_pose.orientation.x = mocap_pose_data.pose.orientation.x;
+        current_pose.orientation.y =  mocap_pose_data.pose.orientation.y;
+        current_pose.orientation.z = mocap_pose_data.pose.orientation.z;
+        current_pose.orientation.w = mocap_pose_data.pose.orientation.w;
         pose_pub.publish(current_pose);
 
         // Publish the velocity data
